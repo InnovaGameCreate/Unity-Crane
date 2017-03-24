@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class testrotate : MonoBehaviour {
+public class TestRotate : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

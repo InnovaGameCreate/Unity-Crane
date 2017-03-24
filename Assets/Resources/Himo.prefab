@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4450395359086998}
   m_Layer: 0
-  m_Name: "\uFF28\uFF49\uFF4D\uFF4F"
+  m_Name: Himo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
