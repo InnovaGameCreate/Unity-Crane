@@ -61,8 +61,8 @@ public class SimpleCarController : MonoBehaviour
 
         RearLeft.brakeTorque = 0;
         RearRight.brakeTorque =0;
-        // SPACEを押せばブレーキ。 
-        if (Input.GetKey(KeyCode.Space))
+        //Bを押せばブレーキ。 
+        if (Input.GetKey(KeyCode.B))
         {
             // ブレーキをかける値に代入。 
             RearLeft.brakeTorque = Breaking;

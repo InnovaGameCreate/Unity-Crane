@@ -15,21 +15,29 @@ public class BodyRotate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-            transform.Rotate(0,  Position, 0);
-       
+        Vector3 rot = GetComponent<Transform>().rotation.eulerAngles;
+        transform.Rotate(0,  Position, 0);
+        Debug.Log(rot.y);
         if (Input.GetKey(KeyCode.H))
         {
-            Position += RotateSpeed;
-            BeforePosition = gameObject.transform.rotation.y;
-            transform.Rotate(0, Position, 0);
+            rot = new Vector3(rot.x, rot.y + RotateSpeed, rot.z);
+      //      Position += RotateSpeed;
+           // BeforePosition = gameObject.transform.rotation.y;
+        //    transform.Rotate(0, Position, 0);
+            if (rot.y < 90|| rot.y>270)
+                transform.Rotate(new Vector3(0, 1, 0), RotateSpeed);
         }
 
-        if(Input.GetKey(KeyCode.F))
+       else if(Input.GetKey(KeyCode.F))
         {
-            Position -= RotateSpeed;
-            BeforePosition = gameObject.transform.rotation.y;
-            transform.Rotate(0, Position, 0);
+            rot = new Vector3(rot.x, rot.y - RotateSpeed, rot.z);
+
+            //Position -= RotateSpeed;
+            //BeforePosition = gameObject.transform.rotation.y;
+           // transform.Rotate(0, Position, 0);
+
+            if (rot.y > 270|| rot.y < 90)
+                transform.Rotate(new Vector3(0, 1, 0), -RotateSpeed);
         }
   
 
