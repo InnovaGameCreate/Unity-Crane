@@ -12,12 +12,28 @@ public class SimpleCarController : MonoBehaviour
     public WheelCollider FrontLeft;
     public WheelCollider RearRight;//後輪
     public WheelCollider RearLeft;
-    float Breaking = 1000;
+    private AudioSource[] se = new AudioSource[(int)EngineSe.None];
+    private bool checkse = false;           //エンジン音切り替えフラグ
+    private float count;                    //スタートエンジン音終了までのカウント
+    float Breaking = 1000; 
 
     private Rigidbody rb;
 
+    //エンジン効果音
+    private enum EngineSe
+    {
+        Idling,
+        Starting,
+        Running,
+        None
+    }
     void Start()
     {
+        //se関連
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        for(int i=0;i<(int)EngineSe.None;i++)
+         se[i]= audioSources[i];
+
         //回転方向変更(よく分からなかったのでとりあえず動くように調整)
         FrontLeft.steerAngle = -90;
         FrontRight.steerAngle = -90;
@@ -25,10 +41,36 @@ public class SimpleCarController : MonoBehaviour
         RearRight.steerAngle = -90;
 
         rb = GetComponent<Rigidbody>();
+   
     }
 
     void Update()
     {
+        //前方向速度取得
+        var fwdSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, -transform.right);
+        Debug.Log(fwdSpeed);
+     
+        if (fwdSpeed > 1&&checkse==true) {
+            if (count == 0)
+            {
+                se[(int)EngineSe.Idling].Stop();
+                se[(int)EngineSe.Starting].Play();
+            }
+            if (count >5)
+            {
+                se[(int)EngineSe.Starting].Stop();
+                se[(int)EngineSe.Running].Play();
+                checkse = false;
+                count = 0;
+            }
+            count+=Time.deltaTime;
+        }
+        else if(fwdSpeed <= 1 && checkse ==false)
+        {
+            se[(int)EngineSe.Idling].Play();
+            se[(int)EngineSe.Running].Stop();
+            checkse = true;
+        }
         //重心計算
         rb.ResetCenterOfMass();
         Vector3 mass = rb.centerOfMass;
@@ -61,8 +103,8 @@ public class SimpleCarController : MonoBehaviour
 
         RearLeft.brakeTorque = 0;
         RearRight.brakeTorque =0;
-        // SPACEを押せばブレーキ。 
-        if (Input.GetKey(KeyCode.Space))
+        //Bを押せばブレーキ。 
+        if (Input.GetKey(KeyCode.B))
         {
             // ブレーキをかける値に代入。 
             RearLeft.brakeTorque = Breaking;

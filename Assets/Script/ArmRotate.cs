@@ -76,6 +76,7 @@ public class ArmRotate : MonoBehaviour
                 catching = false;
                 for (int i = 0; i < catchobj.transform.childCount; i++)
                     catchobj.transform.GetChild(i).GetComponent<BoxCollider>().enabled = true;
+                catchobj.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
                 catchobj = null;
             }
         }
