@@ -16,9 +16,23 @@ public class ArmRotate : MonoBehaviour
     private bool MaxRotate; //アームの閉じる限界角度
     private bool MinRotate; //アームの開く限界角度
     private float valArmRotation;
+    private AudioSource[] se = new AudioSource[(int)ArmSe.None];
+    //エンジン効果音
+    private enum ArmSe
+    {
+        Up,
+        Down,
+        None
+    }
+
     // Use this for initialization
     void Start()
     {
+        //se関連
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        for (int i = 0; i < (int)ArmSe.None; i++)
+            se[i] = audioSources[i];
+
         MaxRotate = false;
         MinRotate = false;
         valArmRotation = RightArm.transform.rotation.z;
@@ -44,7 +58,7 @@ public class ArmRotate : MonoBehaviour
         //スペースがアーム閉　Ｘが開
         if (Input.GetKey(KeyCode.Space) && !MaxRotate)
         {
-
+            se[(int)ArmSe.Down].Play();
             RightArm.transform.Rotate(0, 0, -RotateSpeed);
             LeftArm.transform.Rotate(0, 0, RotateSpeed);
             RightArm1.transform.Rotate(0, 0, RotateSpeed);
@@ -53,7 +67,7 @@ public class ArmRotate : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.X) && !MinRotate)
         {
-
+            se[(int)ArmSe.Up].Play();
             RightArm.transform.Rotate(0, 0, RotateSpeed);
             LeftArm.transform.Rotate(0, 0, -RotateSpeed);
             RightArm1.transform.Rotate(0, 0, -RotateSpeed);
@@ -81,7 +95,7 @@ public class ArmRotate : MonoBehaviour
             }
         }
 
-   
+
     }
 
     void OnTriggerStay(Collider collider)
@@ -89,7 +103,7 @@ public class ArmRotate : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X) && collider.CompareTag("MovableObj"))
         {
             catching = true;
-           catchobj = collider.gameObject;
+            catchobj = collider.gameObject;
             // 子要素を全て取得する
             //あたり判定一時的に無効
             for (int i = 0; i < catchobj.transform.childCount; i++)

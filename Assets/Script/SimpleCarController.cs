@@ -56,18 +56,23 @@ public class SimpleCarController : MonoBehaviour
                 se[(int)EngineSe.Idling].Stop();
                 se[(int)EngineSe.Starting].Play();
             }
+
+            count += Time.deltaTime;
+            if(count<4)
+                se[(int)EngineSe.Running].Play();
             if (count >5)
             {
                 se[(int)EngineSe.Starting].Stop();
-                se[(int)EngineSe.Running].Play();
+          
                 checkse = false;
                 count = 0;
             }
-            count+=Time.deltaTime;
+        
         }
         else if(fwdSpeed <= 1 && checkse ==false)
         {
             se[(int)EngineSe.Idling].Play();
+            se[(int)EngineSe.Starting].Stop();
             se[(int)EngineSe.Running].Stop();
             checkse = true;
         }
