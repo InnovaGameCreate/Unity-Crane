@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: New Material
-  m_Shader: {fileID: 4800000, guid: 9ce107479d11178d11005b9844295342, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -48,7 +48,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: 5485e2f56028a3c4cb54f5caa167377e, type: 3}
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -69,31 +69,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Ramp
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _SpecGlossMap
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ToonShade
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
         name: _BumpScale
       second: 1
-    - first:
-        name: _CullMode
-      second: 2
     - first:
         name: _Cutoff
       second: 0.5
@@ -122,15 +101,6 @@ Material:
         name: _OcclusionStrength
       second: 1
     - first:
-        name: _OuterFrameWidth
-      second: 0.67
-    - first:
-        name: _Outline
-      second: 0.03
-    - first:
-        name: _OutlineWidth
-      second: 0.1
-    - first:
         name: _Parallax
       second: 0.02
     - first:
@@ -142,15 +112,6 @@ Material:
     - first:
         name: _SrcBlend
       second: 1
-    - first:
-        name: _StencilRefMain
-      second: 100
-    - first:
-        name: _StencilRefOuterFrame
-      second: 229
-    - first:
-        name: _StencilRefShadow
-      second: 108
     - first:
         name: _UVSec
       second: 0
@@ -164,21 +125,3 @@ Material:
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
-    - first:
-        name: _MainColor
-      second: {r: 0.19852942, g: 0, b: 0, a: 1}
-    - first:
-        name: _OuterFrameColor
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _OuterShadowColor
-      second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
-    - first:
-        name: _OuterShadowOffset
-      second: {r: -0.5, g: -0.5, b: 0, a: 0}
-    - first:
-        name: _OutlineColor
-      second: {r: 1, g: 0, b: 0, a: 0}
-    - first:
-        name: _SpecColor
-      second: {r: 0.2, g: 0.2, b: 0.2, a: 1}

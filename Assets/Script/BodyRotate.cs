@@ -17,8 +17,7 @@ public class BodyRotate : MonoBehaviour {
 	void Update () {
         Vector3 rot = GetComponent<Transform>().localRotation.eulerAngles;
         transform.Rotate(0,  Position, 0);
-        Debug.Log(rot.y);
-        if (Input.GetKey(KeyCode.H))
+        if (Input.GetKey(KeyCode.D))
         {
             rot = new Vector3(rot.x, rot.y + RotateSpeed, rot.z);
       //      Position += RotateSpeed;
@@ -28,7 +27,7 @@ public class BodyRotate : MonoBehaviour {
                 transform.Rotate(new Vector3(0, 1, 0), RotateSpeed);
         }
 
-       else if(Input.GetKey(KeyCode.F))
+       else if(Input.GetKey(KeyCode.A))
         {
             rot = new Vector3(rot.x, rot.y - RotateSpeed, rot.z);
 

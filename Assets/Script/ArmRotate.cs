@@ -55,10 +55,10 @@ public class ArmRotate : MonoBehaviour
         else
             MinRotate = false;
 
-        //スペースがアーム閉　Ｘが開
-        if (Input.GetKey(KeyCode.Space) && !MaxRotate)
+        //スペースがアーム閉　Cが開
+        if (Input.GetKeyDown(KeyCode.C) && !MaxRotate)
         {
-            se[(int)ArmSe.Down].Play();
+        
             RightArm.transform.Rotate(0, 0, -RotateSpeed);
             LeftArm.transform.Rotate(0, 0, RotateSpeed);
             RightArm1.transform.Rotate(0, 0, RotateSpeed);
@@ -67,7 +67,7 @@ public class ArmRotate : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.X) && !MinRotate)
         {
-            se[(int)ArmSe.Up].Play();
+
             RightArm.transform.Rotate(0, 0, RotateSpeed);
             LeftArm.transform.Rotate(0, 0, -RotateSpeed);
             RightArm1.transform.Rotate(0, 0, -RotateSpeed);
@@ -85,8 +85,9 @@ public class ArmRotate : MonoBehaviour
         {
 
             catchobj.GetComponent<Transform>().position = GetComponent<Transform>().position;
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.C))
             {
+                se[(int)ArmSe.Down].Play();
                 catching = false;
                 for (int i = 0; i < catchobj.transform.childCount; i++)
                     catchobj.transform.GetChild(i).GetComponent<BoxCollider>().enabled = true;
@@ -102,6 +103,7 @@ public class ArmRotate : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X) && collider.CompareTag("MovableObj"))
         {
+            se[(int)ArmSe.Up].Play();
             catching = true;
             catchobj = collider.gameObject;
             // 子要素を全て取得する

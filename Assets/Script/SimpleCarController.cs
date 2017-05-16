@@ -15,7 +15,9 @@ public class SimpleCarController : MonoBehaviour
     private AudioSource[] se = new AudioSource[(int)EngineSe.None];
     private bool checkse = false;           //エンジン音切り替えフラグ
     private float count;                    //スタートエンジン音終了までのカウント
-    float Breaking = 1000; 
+    private bool brakingflag = false;       //ブレーキフラグ Se用
+    private float fwdSpeed;                   //前進速度
+    float Breaking = 1000;
 
     private Rigidbody rb;
 
@@ -25,14 +27,16 @@ public class SimpleCarController : MonoBehaviour
         Idling,
         Starting,
         Running,
+        Braking,
+        Damage,
         None
     }
     void Start()
     {
         //se関連
         AudioSource[] audioSources = GetComponents<AudioSource>();
-        for(int i=0;i<(int)EngineSe.None;i++)
-         se[i]= audioSources[i];
+        for (int i = 0; i < (int)EngineSe.None; i++)
+            se[i] = audioSources[i];
 
         //回転方向変更(よく分からなかったのでとりあえず動くように調整)
         FrontLeft.steerAngle = -90;
@@ -41,16 +45,16 @@ public class SimpleCarController : MonoBehaviour
         RearRight.steerAngle = -90;
 
         rb = GetComponent<Rigidbody>();
-   
+
     }
 
     void Update()
     {
         //前方向速度取得
-        var fwdSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, -transform.right);
-        Debug.Log(fwdSpeed);
-     
-        if (fwdSpeed > 1&&checkse==true) {
+       fwdSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, -transform.right);
+        //Debug.Log(fwdSpeed);
+        if (fwdSpeed > 1 && checkse == true)
+        {
             if (count == 0)
             {
                 se[(int)EngineSe.Idling].Stop();
@@ -58,18 +62,18 @@ public class SimpleCarController : MonoBehaviour
             }
 
             count += Time.deltaTime;
-            if(count<4)
+            if (count < 4)
                 se[(int)EngineSe.Running].Play();
-            if (count >5)
+            if (count > 5)
             {
                 se[(int)EngineSe.Starting].Stop();
-          
+
                 checkse = false;
                 count = 0;
             }
-        
+
         }
-        else if(fwdSpeed <= 1 && checkse ==false)
+        else if (fwdSpeed <= 1 && checkse == false)
         {
             se[(int)EngineSe.Idling].Play();
             se[(int)EngineSe.Starting].Stop();
@@ -83,8 +87,16 @@ public class SimpleCarController : MonoBehaviour
         rb.centerOfMass = mass;
 
         //移動
-        RearRight.motorTorque = Input.GetAxis("Vertical") * Speed;
-        RearLeft.motorTorque = Input.GetAxis("Vertical") * Speed;
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            RearRight.motorTorque = RearLeft.motorTorque = Speed;
+            brakingflag =true;
+        }
+        else if (Input.GetKey(KeyCode.DownArrow))
+            RearRight.motorTorque = RearLeft.motorTorque = -Speed;
+        else
+            RearRight.motorTorque = RearLeft.motorTorque = 0;
+
 
         //タイヤの角度変更(なぜかＷＡＳＤでも動いた)
         if (Input.GetKey(KeyCode.RightArrow) && FrontRight.steerAngle < -90 + Maxsteer)
@@ -100,27 +112,35 @@ public class SimpleCarController : MonoBehaviour
             FrontLeft.steerAngle -= RotateSpeed;
 
         }
-        if(Input.GetKeyUp(KeyCode.RightArrow)|| Input.GetKeyUp(KeyCode.LeftArrow))
+        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
         {
-            FrontRight.steerAngle = FrontLeft.steerAngle =-90 ;
-           
+            FrontRight.steerAngle = FrontLeft.steerAngle = -90;
+
         }
 
         RearLeft.brakeTorque = 0;
-        RearRight.brakeTorque =0;
+        RearRight.brakeTorque = 0;
         //Bを押せばブレーキ。 
-        if (Input.GetKey(KeyCode.B))
+        if (Input.GetKey(KeyCode.Space))
         {
+            if (!se[(int)EngineSe.Braking].isPlaying && fwdSpeed > 3 && brakingflag)
+            {
+                se[(int)EngineSe.Braking].Play();
+                brakingflag = false;
+            }
             // ブレーキをかける値に代入。 
             RearLeft.brakeTorque = Breaking;
             RearRight.brakeTorque = Breaking;
         }
 
+        // se[(int)EngineSe.Braking].Stop();
+    }
 
-   
-      
-
-
+    void OnTriggerEnter(Collider collider)
+    {
+        if(!se[(int)EngineSe.Damage].isPlaying&& fwdSpeed >3)
+        se[(int)EngineSe.Damage].Play();
+        Debug.Log("aaaaa");
 
     }
 }
