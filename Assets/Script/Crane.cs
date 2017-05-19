@@ -14,14 +14,18 @@ public class Crane : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-        if(Input.GetKey(KeyCode.G))
+        Vector3 rot  =  GetComponent<Transform>().localRotation.eulerAngles;
+        if (Input.GetKey(KeyCode.W))
         {
-            transform.Rotate(new Vector3(0, 0, 1), -MoveSpeed);
+            rot = new Vector3(rot.x, rot.y, rot.z - MoveSpeed);
+            if (rot.z > 325)
+                transform.Rotate(new Vector3(0, 0, 1), -MoveSpeed);
         }
-        if (Input.GetKey(KeyCode.T))
+        else if (Input.GetKey(KeyCode.S))
         {
-            transform.Rotate(new Vector3(0, 0, 1), MoveSpeed);
+            rot = new Vector3(rot.x, rot.y, rot.z + MoveSpeed);
+            if (rot.z<360&&rot.z>325)
+                transform.Rotate(new Vector3(0, 0, 1), MoveSpeed);
         }
 
     }
