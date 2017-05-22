@@ -17,7 +17,7 @@ public class SimpleCarController : MonoBehaviour
     private float count;                    //スタートエンジン音終了までのカウント
     private bool brakingflag = false;       //ブレーキフラグ Se用
     private float fwdSpeed;                   //前進速度
-    float Breaking = 1000;
+    float Breaking = 5000;
 
     private Rigidbody rb;
 
@@ -50,8 +50,11 @@ public class SimpleCarController : MonoBehaviour
 
     void Update()
     {
+        Vector3 rot = GetComponent<Transform>().localRotation.eulerAngles;
+        rot = new Vector3(0, rot.y, rot.z);
+        GetComponent<Transform>().localRotation = Quaternion.Euler(rot);
         //前方向速度取得
-       fwdSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, -transform.right);
+        fwdSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, -transform.right);
         //Debug.Log(fwdSpeed);
         if (fwdSpeed > 1 && checkse == true)
         {
@@ -80,11 +83,13 @@ public class SimpleCarController : MonoBehaviour
             se[(int)EngineSe.Running].Stop();
             checkse = true;
         }
+
+       
         //重心計算
-        rb.ResetCenterOfMass();
-        Vector3 mass = rb.centerOfMass;
-        mass.y -= 1;
-        rb.centerOfMass = mass;
+        // rb.ResetCenterOfMass();
+        //   Vector3 mass = rb.centerOfMass;
+        // mass.y -= 1;
+        //rb.centerOfMass = mass;
 
         //移動
         if (Input.GetKey(KeyCode.UpArrow))
@@ -110,6 +115,7 @@ public class SimpleCarController : MonoBehaviour
         {
             FrontRight.steerAngle -= RotateSpeed;
             FrontLeft.steerAngle -= RotateSpeed;
+
 
         }
         if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
@@ -140,7 +146,6 @@ public class SimpleCarController : MonoBehaviour
     {
         if(!se[(int)EngineSe.Damage].isPlaying&& fwdSpeed >3)
         se[(int)EngineSe.Damage].Play();
-        Debug.Log("aaaaa");
 
     }
 }

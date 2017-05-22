@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Onoty3D/Toon/Lit OuterFrame" {
 	Properties {
 		_Color ("Main Color", Color) = (0.5,0.5,0.5,1)
@@ -51,7 +53,7 @@ Shader "Onoty3D/Toon/Lit OuterFrame" {
 
 				v2f vert(appdata v) {
 					v2f o;
-					o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+					o.pos = UnityObjectToClipPos(v.vertex);
 
 					float3 norm = normalize(mul((float3x3)UNITY_MATRIX_IT_MV, v.normal));
 					float2 offset = TransformViewToProjection(norm.xy);
@@ -102,7 +104,7 @@ Shader "Onoty3D/Toon/Lit OuterFrame" {
 
 				v2f vert(appdata v) {
 					v2f o;
-					o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+					o.pos = UnityObjectToClipPos(v.vertex);
 
 					float3 norm = normalize(mul((float3x3)UNITY_MATRIX_IT_MV, v.normal));
 					float2 offset = TransformViewToProjection(norm.xy);

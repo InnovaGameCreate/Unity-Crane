@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChangeCamera : MonoBehaviour
 {
-    public Camera[] cameraobj = new Camera[4];
+    public Camera[] cameraobj = new Camera[5];
     // Use this for initialization
     void Start()
     {
@@ -17,21 +17,28 @@ public class ChangeCamera : MonoBehaviour
         if (Input.GetKey(KeyCode.Alpha1))
         {
             cameraobj[0].enabled = true;
-            cameraobj[1].enabled = cameraobj[2].enabled = cameraobj[3].enabled = false;
+            cameraobj[1].enabled = cameraobj[2].enabled = cameraobj[3].enabled = cameraobj[4].enabled = false;
         }
-        else if (Input.GetKey(KeyCode.Alpha2)) {
+        else if (Input.GetKey(KeyCode.Alpha2))
+        {
             cameraobj[1].enabled = true;
-            cameraobj[0].enabled = cameraobj[2].enabled = cameraobj[3].enabled = false;
+            cameraobj[0].enabled = cameraobj[2].enabled = cameraobj[3].enabled = cameraobj[4].enabled = false;
 
-        } else if (Input.GetKey(KeyCode.Alpha3)) {
+        }
+        else if (Input.GetKey(KeyCode.Alpha3))
+        {
             cameraobj[2].enabled = true;
-            cameraobj[0].enabled = cameraobj[1].enabled = cameraobj[3].enabled = false;
+            cameraobj[0].enabled = cameraobj[1].enabled = cameraobj[3].enabled = cameraobj[4].enabled = false;
         }
         else if (Input.GetKey(KeyCode.Alpha4))
         {
             cameraobj[3].enabled = true;
-            cameraobj[0].enabled = cameraobj[1].enabled = cameraobj[2].enabled = false;
+            cameraobj[0].enabled = cameraobj[1].enabled = cameraobj[2].enabled = cameraobj[4].enabled = false;
         }
-            
+        else if (Input.GetKey(KeyCode.Alpha5))
+        {
+            cameraobj[4].enabled = true;
+            cameraobj[0].enabled = cameraobj[1].enabled = cameraobj[2].enabled = cameraobj[3].enabled = false;
+        }
     }
 }
