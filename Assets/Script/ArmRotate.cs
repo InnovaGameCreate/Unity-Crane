@@ -11,6 +11,7 @@ public class ArmRotate : MonoBehaviour
     public GameObject catchobjcollider; //キャッチあたり判定
     public float RotateSpeed;
 
+
     private bool catching = false; //持ってるかどうか
     private GameObject catchobj; //つかんだオブジェクト
     private bool MaxRotate; //アームの閉じる限界角度
@@ -89,14 +90,20 @@ public class ArmRotate : MonoBehaviour
             {
                 se[(int)ArmSe.Down].Play();
                 catching = false;
-                for (int i = 0; i < catchobj.transform.childCount; i++)
-                    catchobj.transform.GetChild(i).GetComponent<BoxCollider>().enabled = true;
+                //for (int i = 0; i < catchobj.transform.childCount; i++)
+                //   catchobj.transform.GetChild(i).GetComponent<BoxCollider>().enabled = true;
+                catchobj.GetComponent<BoxCollider>().enabled = true;
                 catchobj.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
                 catchobj = null;
             }
         }
 
 
+    }
+
+   public bool get_catching()
+    {
+        return catching;
     }
 
     void OnTriggerStay(Collider collider)
@@ -108,8 +115,9 @@ public class ArmRotate : MonoBehaviour
             catchobj = collider.gameObject;
             // 子要素を全て取得する
             //あたり判定一時的に無効
-            for (int i = 0; i < catchobj.transform.childCount; i++)
-                catchobj.transform.GetChild(i).GetComponent<BoxCollider>().enabled = false;
+            // for (int i = 0; i < catchobj.transform.childCount; i++)
+            //    catchobj.transform.GetChild(i).GetComponent<BoxCollider>().enabled = false;
+            catchobj.GetComponent<BoxCollider>().enabled = false;
         }
 
 

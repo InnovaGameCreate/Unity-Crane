@@ -12,12 +12,14 @@ public class SimpleCarController : MonoBehaviour
     public WheelCollider FrontLeft;
     public WheelCollider RearRight;//後輪
     public WheelCollider RearLeft;
+    private SpeedMeter speedmeter;       //スピードメーター
+
     private AudioSource[] se = new AudioSource[(int)EngineSe.None];
     private bool checkse = false;           //エンジン音切り替えフラグ
     private float count;                    //スタートエンジン音終了までのカウント
     private bool brakingflag = false;       //ブレーキフラグ Se用
     private float fwdSpeed;                   //前進速度
-    float Breaking = 5000;
+    float Breaking = 10000;
 
     private Rigidbody rb;
 
@@ -45,7 +47,7 @@ public class SimpleCarController : MonoBehaviour
         RearRight.steerAngle = -90;
 
         rb = GetComponent<Rigidbody>();
-
+       speedmeter = transform.Find("/Canvas/SpeedMeter").GetComponent<SpeedMeter>();
     }
 
     void Update()
@@ -55,6 +57,7 @@ public class SimpleCarController : MonoBehaviour
         GetComponent<Transform>().localRotation = Quaternion.Euler(rot);
         //前方向速度取得
         fwdSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, -transform.right);
+        speedmeter.ChangeNowSpeed(Mathf.Abs(fwdSpeed));
         //Debug.Log(fwdSpeed);
         if (fwdSpeed > 1 && checkse == true)
         {
@@ -140,6 +143,11 @@ public class SimpleCarController : MonoBehaviour
         }
 
         // se[(int)EngineSe.Braking].Stop();
+    }
+
+    public float get_fwdspeed()
+    {
+        return fwdSpeed;
     }
 
     void OnTriggerEnter(Collider collider)
