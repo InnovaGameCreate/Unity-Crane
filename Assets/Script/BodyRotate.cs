@@ -9,14 +9,22 @@ public class BodyRotate : MonoBehaviour {
     private float relationPosition;
 	// Use this for initialization
 	void Start () {
+<<<<<<< HEAD
+      //  Position = gameObject.transform.rotation.y;
+=======
         Position = gameObject.transform.rotation.y;
+>>>>>>> 3492851a250a340db1ec231ee25615632125268f
        
 	}
 	
 	// Update is called once per frame
 	void Update () {
         Vector3 rot = GetComponent<Transform>().localRotation.eulerAngles;
+<<<<<<< HEAD
+      //  transform.Rotate(0,  Position, 0);
+=======
         transform.Rotate(0,  Position, 0);
+>>>>>>> 3492851a250a340db1ec231ee25615632125268f
         if (Input.GetKey(KeyCode.D))
         {
             rot = new Vector3(rot.x, rot.y + RotateSpeed, rot.z);

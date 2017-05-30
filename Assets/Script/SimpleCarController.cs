@@ -41,10 +41,10 @@ public class SimpleCarController : MonoBehaviour
             se[i] = audioSources[i];
 
         //回転方向変更(よく分からなかったのでとりあえず動くように調整)
-        FrontLeft.steerAngle = -90;
-        FrontRight.steerAngle = -90;
-        RearLeft.steerAngle = -90;
-        RearRight.steerAngle = -90;
+        FrontLeft.steerAngle = 0;
+        FrontRight.steerAngle = 0;
+        RearLeft.steerAngle = 0;
+        RearRight.steerAngle = 0;
 
         rb = GetComponent<Rigidbody>();
        speedmeter = transform.Find("/Canvas/SpeedMeter").GetComponent<SpeedMeter>();
@@ -53,10 +53,17 @@ public class SimpleCarController : MonoBehaviour
     void Update()
     {
         Vector3 rot = GetComponent<Transform>().localRotation.eulerAngles;
+<<<<<<< HEAD
+        rot = new Vector3(rot.x, rot.y, 0);
+        GetComponent<Transform>().localRotation = Quaternion.Euler(rot);
+        //前方向速度取得
+        fwdSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, transform.forward);
+=======
         rot = new Vector3(0, rot.y, rot.z);
         GetComponent<Transform>().localRotation = Quaternion.Euler(rot);
         //前方向速度取得
         fwdSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, -transform.right);
+>>>>>>> 3492851a250a340db1ec231ee25615632125268f
         speedmeter.ChangeNowSpeed(Mathf.Abs(fwdSpeed));
         //Debug.Log(fwdSpeed);
         if (fwdSpeed > 1 && checkse == true)
@@ -107,14 +114,14 @@ public class SimpleCarController : MonoBehaviour
 
 
         //タイヤの角度変更(なぜかＷＡＳＤでも動いた)
-        if (Input.GetKey(KeyCode.RightArrow) && FrontRight.steerAngle < -90 + Maxsteer)
+        if (Input.GetKey(KeyCode.RightArrow) && FrontRight.steerAngle <  + Maxsteer)
         {
             FrontRight.steerAngle += RotateSpeed;
             FrontLeft.steerAngle += RotateSpeed;
 
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) && FrontRight.steerAngle > -90 - Maxsteer)
+        if (Input.GetKey(KeyCode.LeftArrow) && FrontRight.steerAngle >  - Maxsteer)
         {
             FrontRight.steerAngle -= RotateSpeed;
             FrontLeft.steerAngle -= RotateSpeed;
@@ -123,7 +130,11 @@ public class SimpleCarController : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
         {
+<<<<<<< HEAD
+            FrontRight.steerAngle = FrontLeft.steerAngle = 0;
+=======
             FrontRight.steerAngle = FrontLeft.steerAngle = -90;
+>>>>>>> 3492851a250a340db1ec231ee25615632125268f
 
         }
 

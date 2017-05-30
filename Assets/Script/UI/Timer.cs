@@ -10,6 +10,10 @@ public class Timer : MonoBehaviour
     private Text text_;
     private int minute;
     private int second;
+<<<<<<< HEAD
+    private bool stop;  //ゴールなどした際カウントを止める
+=======
+>>>>>>> 3492851a250a340db1ec231ee25615632125268f
 
     // Use this for initialization
     void Start()
@@ -20,7 +24,12 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
+        if (!stop)
+            time_ -= Time.deltaTime;
+=======
         time_ -= Time.deltaTime;
+>>>>>>> 3492851a250a340db1ec231ee25615632125268f
         if (time_ > 0)
         {
             TimeToMinute();
@@ -32,6 +41,14 @@ public class Timer : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
+    public void set_stop(bool set)
+    {
+        stop = set;
+    }
+
+=======
+>>>>>>> 3492851a250a340db1ec231ee25615632125268f
     void TimeToMinute()
     {
         minute = (int)time_ / 60;
