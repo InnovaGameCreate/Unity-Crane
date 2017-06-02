@@ -12,12 +12,14 @@ public class SimpleCarController : MonoBehaviour
     public WheelCollider FrontLeft;
     public WheelCollider RearRight;//後輪
     public WheelCollider RearLeft;
+    private SpeedMeter speedmeter;       //スピードメーター
+
     private AudioSource[] se = new AudioSource[(int)EngineSe.None];
     private bool checkse = false;           //エンジン音切り替えフラグ
     private float count;                    //スタートエンジン音終了までのカウント
     private bool brakingflag = false;       //ブレーキフラグ Se用
     private float fwdSpeed;                   //前進速度
-    float Breaking = 1000;
+    float Breaking = 10000;
 
     private Rigidbody rb;
 
@@ -39,19 +41,23 @@ public class SimpleCarController : MonoBehaviour
             se[i] = audioSources[i];
 
         //回転方向変更(よく分からなかったのでとりあえず動くように調整)
-        FrontLeft.steerAngle = -90;
-        FrontRight.steerAngle = -90;
-        RearLeft.steerAngle = -90;
-        RearRight.steerAngle = -90;
+        FrontLeft.steerAngle = 0;
+        FrontRight.steerAngle = 0;
+        RearLeft.steerAngle = 0;
+        RearRight.steerAngle = 0;
 
         rb = GetComponent<Rigidbody>();
-
+       speedmeter = transform.Find("/Canvas/SpeedMeter").GetComponent<SpeedMeter>();
     }
 
     void Update()
     {
+        Vector3 rot = GetComponent<Transform>().localRotation.eulerAngles;
+        rot = new Vector3(rot.x, rot.y, 0);
+        GetComponent<Transform>().localRotation = Quaternion.Euler(rot);
         //前方向速度取得
-       fwdSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, -transform.right);
+        fwdSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, transform.forward);
+        speedmeter.ChangeNowSpeed(Mathf.Abs(fwdSpeed));
         //Debug.Log(fwdSpeed);
         if (fwdSpeed > 1 && checkse == true)
         {
@@ -80,11 +86,13 @@ public class SimpleCarController : MonoBehaviour
             se[(int)EngineSe.Running].Stop();
             checkse = true;
         }
+
+       
         //重心計算
-        rb.ResetCenterOfMass();
-        Vector3 mass = rb.centerOfMass;
-        mass.y -= 1;
-        rb.centerOfMass = mass;
+        // rb.ResetCenterOfMass();
+        //   Vector3 mass = rb.centerOfMass;
+        // mass.y -= 1;
+        //rb.centerOfMass = mass;
 
         //移動
         if (Input.GetKey(KeyCode.UpArrow))
@@ -99,22 +107,23 @@ public class SimpleCarController : MonoBehaviour
 
 
         //タイヤの角度変更(なぜかＷＡＳＤでも動いた)
-        if (Input.GetKey(KeyCode.RightArrow) && FrontRight.steerAngle < -90 + Maxsteer)
+        if (Input.GetKey(KeyCode.RightArrow) && FrontRight.steerAngle <  + Maxsteer)
         {
             FrontRight.steerAngle += RotateSpeed;
             FrontLeft.steerAngle += RotateSpeed;
 
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) && FrontRight.steerAngle > -90 - Maxsteer)
+        if (Input.GetKey(KeyCode.LeftArrow) && FrontRight.steerAngle >  - Maxsteer)
         {
             FrontRight.steerAngle -= RotateSpeed;
             FrontLeft.steerAngle -= RotateSpeed;
 
+
         }
         if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
         {
-            FrontRight.steerAngle = FrontLeft.steerAngle = -90;
+            FrontRight.steerAngle = FrontLeft.steerAngle = 0;
 
         }
 
@@ -134,6 +143,11 @@ public class SimpleCarController : MonoBehaviour
         }
 
         // se[(int)EngineSe.Braking].Stop();
+    }
+
+    public float get_fwdspeed()
+    {
+        return fwdSpeed;
     }
 
     void OnTriggerEnter(Collider collider)

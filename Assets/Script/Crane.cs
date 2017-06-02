@@ -5,7 +5,6 @@ using UnityEngine;
 public class Crane : MonoBehaviour {
     public float MoveSpeed;
     private float LimitDown = -10;
-    public GameObject crane;
 
 	// Use this for initialization
 	void Start () {
@@ -17,16 +16,18 @@ public class Crane : MonoBehaviour {
         Vector3 rot  =  GetComponent<Transform>().localRotation.eulerAngles;
         if (Input.GetKey(KeyCode.W))
         {
-            rot = new Vector3(rot.x, rot.y, rot.z - MoveSpeed);
-            if (rot.z > 325)
-                transform.Rotate(new Vector3(0, 0, 1), -MoveSpeed);
+            rot = new Vector3(rot.x - MoveSpeed, rot.y, rot.z );
+            if (rot.x < 320)
+                transform.Rotate(new Vector3(1, 0, 0), -MoveSpeed);
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            rot = new Vector3(rot.x, rot.y, rot.z + MoveSpeed);
-            if (rot.z<360&&rot.z>325)
-                transform.Rotate(new Vector3(0, 0, 1), MoveSpeed);
+            rot = new Vector3(rot.x + MoveSpeed, rot.y, rot.z );
+            if (rot.x >271)
+                transform.Rotate(new Vector3(1, 0, 0), MoveSpeed);
+     
         }
 
+        Debug.Log(rot.x);
     }
 }
