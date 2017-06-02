@@ -53,17 +53,10 @@ public class SimpleCarController : MonoBehaviour
     void Update()
     {
         Vector3 rot = GetComponent<Transform>().localRotation.eulerAngles;
-<<<<<<< HEAD
         rot = new Vector3(rot.x, rot.y, 0);
         GetComponent<Transform>().localRotation = Quaternion.Euler(rot);
         //前方向速度取得
         fwdSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, transform.forward);
-=======
-        rot = new Vector3(0, rot.y, rot.z);
-        GetComponent<Transform>().localRotation = Quaternion.Euler(rot);
-        //前方向速度取得
-        fwdSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, -transform.right);
->>>>>>> 3492851a250a340db1ec231ee25615632125268f
         speedmeter.ChangeNowSpeed(Mathf.Abs(fwdSpeed));
         //Debug.Log(fwdSpeed);
         if (fwdSpeed > 1 && checkse == true)
@@ -130,11 +123,7 @@ public class SimpleCarController : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
         {
-<<<<<<< HEAD
             FrontRight.steerAngle = FrontLeft.steerAngle = 0;
-=======
-            FrontRight.steerAngle = FrontLeft.steerAngle = -90;
->>>>>>> 3492851a250a340db1ec231ee25615632125268f
 
         }
 

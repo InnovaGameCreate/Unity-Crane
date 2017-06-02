@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-<<<<<<< HEAD
 using UnityEngine.UI;
 
 public class Goal : MonoBehaviour {
@@ -24,17 +23,5 @@ public class Goal : MonoBehaviour {
             timer.set_stop(true);
         }
 
-=======
-
-public class Goal : MonoBehaviour {
-    public ArmRotate armrotate;         //クレーンのArmを指定
-    public GameObject clearui;           //クリアUI
-
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.CompareTag("MovableObj") && !armrotate.get_catching())
-            clearui.SetActive(true);
-
->>>>>>> 3492851a250a340db1ec231ee25615632125268f
     }
 }
