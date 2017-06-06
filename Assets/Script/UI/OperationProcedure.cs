@@ -18,11 +18,11 @@ public class OperationProcedure : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            canvas.enabled = !canvas.enabled;
+            canvas.enabled = true;
         }
-        if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+        if (Input.GetKeyUp(KeyCode.Tab))
         {
-            return;
+            canvas.enabled = false;
         }
     }
 }
