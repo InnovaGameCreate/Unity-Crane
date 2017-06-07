@@ -28,6 +28,5 @@ public class Crane : MonoBehaviour {
      
         }
 
-        Debug.Log(rot.x);
     }
 }
