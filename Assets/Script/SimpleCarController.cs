@@ -47,7 +47,7 @@ public class SimpleCarController : MonoBehaviour
         RearRight.steerAngle = 0;
 
         rb = GetComponent<Rigidbody>();
-       speedmeter = transform.Find("/Canvas/SpeedMeter").GetComponent<SpeedMeter>();
+        speedmeter = transform.Find("/Canvas/SpeedMeter").GetComponent<SpeedMeter>();
     }
 
     void Update()
@@ -87,7 +87,7 @@ public class SimpleCarController : MonoBehaviour
             checkse = true;
         }
 
-       
+
         //重心計算
         // rb.ResetCenterOfMass();
         //   Vector3 mass = rb.centerOfMass;
@@ -98,7 +98,7 @@ public class SimpleCarController : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             RearRight.motorTorque = RearLeft.motorTorque = Speed;
-            brakingflag =true;
+            brakingflag = true;
         }
         else if (Input.GetKey(KeyCode.DownArrow))
             RearRight.motorTorque = RearLeft.motorTorque = -Speed;
@@ -107,14 +107,14 @@ public class SimpleCarController : MonoBehaviour
 
 
         //タイヤの角度変更(なぜかＷＡＳＤでも動いた)
-        if (Input.GetKey(KeyCode.RightArrow) && FrontRight.steerAngle <  + Maxsteer)
+        if (Input.GetKey(KeyCode.RightArrow) && FrontRight.steerAngle < +Maxsteer)
         {
             FrontRight.steerAngle += RotateSpeed;
             FrontLeft.steerAngle += RotateSpeed;
 
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) && FrontRight.steerAngle >  - Maxsteer)
+        if (Input.GetKey(KeyCode.LeftArrow) && FrontRight.steerAngle > -Maxsteer)
         {
             FrontRight.steerAngle -= RotateSpeed;
             FrontLeft.steerAngle -= RotateSpeed;
@@ -152,8 +152,9 @@ public class SimpleCarController : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if(!se[(int)EngineSe.Damage].isPlaying&& fwdSpeed >3)
-        se[(int)EngineSe.Damage].Play();
+        if (collider.CompareTag("Stage")|| collider.CompareTag("MovableObj"))
+            if (!se[(int)EngineSe.Damage].isPlaying && fwdSpeed > 3)
+                se[(int)EngineSe.Damage].Play();
 
     }
 }

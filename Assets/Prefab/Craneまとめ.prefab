@@ -908,7 +908,7 @@ GameObject:
   - component: {fileID: 114004060424911430}
   - component: {fileID: 65055260714435880}
   m_Layer: 0
-  m_Name: CreanCar
+  m_Name: CranCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
