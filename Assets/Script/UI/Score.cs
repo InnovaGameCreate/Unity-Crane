@@ -21,7 +21,7 @@ public class Score : MonoBehaviour
     }
 
     public const float kLifeTime = 3.0f;//更新切れ秒数
-    public const float kAddAnimScorePerSeconds = 1000.0f;//スコアアニメーションの秒間レート
+    public const float kAddAnimScorePerSeconds = 100.0f;//スコアアニメーションの秒間レート
 
     private Text text_;
     private ScoreMinorTotal minor_total_;
@@ -59,7 +59,7 @@ public class Score : MonoBehaviour
             if (items_[i].anim_score_ < items_[i].score_)
             {
                 item = items_[i];
-                item.anim_score_ += Time.deltaTime * kAddAnimScorePerSeconds;   //1秒間に200プラス
+                item.anim_score_ += Time.deltaTime * kAddAnimScorePerSeconds;
                 if (item.anim_score_ > item.score_)
                     item.anim_score_ = item.score_;         //ラップ
                 items_[i] = item;
