@@ -908,8 +908,8 @@ GameObject:
   - component: {fileID: 114004060424911430}
   - component: {fileID: 65055260714435880}
   m_Layer: 0
-  m_Name: CranCar
-  m_TagString: Untagged
+  m_Name: CraneCar
+  m_TagString: Crane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5470,7 +5470,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 1, z: 10}
+  m_Size: {x: 4, y: 1, z: 8}
   m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!65 &65126910076544962
 BoxCollider:
@@ -5518,7 +5518,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 1, z: 10}
+  m_Size: {x: 4, y: 1, z: 8}
   m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!65 &65898852520986646
 BoxCollider:

@@ -6,25 +6,31 @@ public class RandomThunder : MonoBehaviour
 {
     public GameObject thunder;  //カミナリオブジェクト
     public GameObject marker;   //カミナリ発生予告マーカー
+    private GameObject light;   //ライトオブジェクト
     private GameObject crane;   //クレーンオブジェクト
     private const float lighttime = 5;      //雷落ちるまでの時間
     private float count;
     private float thunderwiderange = 5;        //カミナリ発生横範囲
     private float thunderforwardrange = 10;        //カミナリ発生奥行範囲
+    private float lum = 1.0f;   //明るさ
 
     // Use this for initialization
     void Start()
     {
         crane = GameObject.Find("Craneまとめ/CraneCar");
-        Debug.Log(crane);
+        light = GameObject.Find("Directional Light");
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
         count += Time.deltaTime;
+  
         if (count > lighttime)
         {
+
             count = 0;
             appearThunder();
         }

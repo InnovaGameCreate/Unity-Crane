@@ -16,7 +16,8 @@ public class Score : MonoBehaviour
 
     public enum ScoreTag
     {
-        kEnemyKill
+        kEnemyKill,
+        Item
     }
 
     public const float kLifeTime = 3.0f;//更新切れ秒数

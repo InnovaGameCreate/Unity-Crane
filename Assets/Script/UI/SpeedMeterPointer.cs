@@ -9,8 +9,8 @@ public class SpeedMeterPointer : MonoBehaviour
     private RawImage raw_image_;
     private float now_speed_;
 
-    private const float kMinRotate = 113.0f;
-    private const float kMaxRotate = -113.0f;
+    private const float kMinRotate = 120.0f;
+    private const float kMaxRotate = -120.0f;
     private const float kMinSpeed = 0.0f;
     private const float kMaxSpeed = 130.0f;
 
