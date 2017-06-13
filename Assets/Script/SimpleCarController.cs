@@ -13,12 +13,13 @@ public class SimpleCarController : MonoBehaviour
     public WheelCollider RearRight;//後輪
     public WheelCollider RearLeft;
     private SpeedMeter speedmeter;       //スピードメーター
-
+    private ArmRotate armrotate;    //クレーンのArmを指定
     private AudioSource[] se = new AudioSource[(int)EngineSe.None];
     private bool checkse = false;           //エンジン音切り替えフラグ
     private float count;                    //スタートエンジン音終了までのカウント
     private bool brakingflag = false;       //ブレーキフラグ Se用
     private float fwdSpeed;                   //前進速度
+    
     float Breaking = 10000;
 
     private Rigidbody rb;
@@ -48,6 +49,7 @@ public class SimpleCarController : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         speedmeter = transform.Find("/Canvas/SpeedMeter").GetComponent<SpeedMeter>();
+        armrotate = GameObject.Find("Craneまとめ/Himo/CreanCar_Claw").GetComponent<ArmRotate>();
     }
 
     void Update()
@@ -145,6 +147,10 @@ public class SimpleCarController : MonoBehaviour
         // se[(int)EngineSe.Braking].Stop();
     }
 
+    public void set_speed(float set)
+    {
+        Speed = set;
+    }
     public float get_fwdspeed()
     {
         return fwdSpeed;
@@ -152,9 +158,10 @@ public class SimpleCarController : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.CompareTag("Stage")|| collider.CompareTag("MovableObj"))
+        if (collider.CompareTag("Stage") || (armrotate.get_catching()==false&& collider.CompareTag("MovableObj")))
             if (!se[(int)EngineSe.Damage].isPlaying && fwdSpeed > 3)
                 se[(int)EngineSe.Damage].Play();
 
+   
     }
 }

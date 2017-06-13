@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowPlayer : MonoBehaviour
-{
-    Vector3 rota;
+public class FollowPlayer : MonoBehaviour { 
+
+        Vector3 rota;
     // Use this for initialization
     void Start()
     {

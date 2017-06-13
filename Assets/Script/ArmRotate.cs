@@ -44,7 +44,6 @@ public class ArmRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //アームの開閉の限界判定（rotation.zで判定すると揺れでzのrotationが変化するため不規則になる)
         if (valArmRotation <= -20)//ここらへんごり押し
             MaxRotate = true;

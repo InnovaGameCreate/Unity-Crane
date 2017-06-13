@@ -5,10 +5,10 @@ using UnityEngine;
 public class thunder : MonoBehaviour {
     private const int disappeartime=8;  //消えるまでの時間
     private float count;    //カウンター 
-    private BoxStatusController boxst;  //箱状態
+    private TargetStatus boxst;  //箱状態
 	// Use this for initialization
 	void Start () {
-        boxst = GameObject.Find("運ぶ物ステータス管理").GetComponent<BoxStatusController>();
+        boxst = GameObject.Find("運ぶ物").GetComponent<TargetStatus>();
 		
 	}
 	
