@@ -1,0 +1,608 @@
+fileFormatVersion: 2
+guid: 3cfc2fbf985a1f445a3cad04fd111182
+timeCreated: 1497118772
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: claw
+    100002: claw.001
+    100004: claw.002
+    100006: claw.003
+    100008: claw.004
+    100010: Claw_Armature
+    100012: Claw_Main
+    100014: Claw_Top_R
+    100016: Claw_Top_R.001
+    100018: Claw_Top_R.001_end
+    100020: Claw_Top_R.002
+    100022: Claw_Top_R.002_end
+    100024: Claw_Top_R.003
+    100026: Claw_Top_R.003_end
+    100028: Claw_Top_R_end
+    100030: //RootNode
+    400000: claw
+    400002: claw.001
+    400004: claw.002
+    400006: claw.003
+    400008: claw.004
+    400010: Claw_Armature
+    400012: Claw_Main
+    400014: Claw_Top_R
+    400016: Claw_Top_R.001
+    400018: Claw_Top_R.001_end
+    400020: Claw_Top_R.002
+    400022: Claw_Top_R.002_end
+    400024: Claw_Top_R.003
+    400026: Claw_Top_R.003_end
+    400028: Claw_Top_R_end
+    400030: //RootNode
+    4300000: claw.004
+    4300002: claw.003
+    4300004: claw.002
+    4300006: claw.001
+    4300008: claw
+    7400000: Claw_Armature|CLOSE
+    7400002: Claw_Armature|Open
+    7400004: Claw_Armature|OPEN
+    7400006: claw.004|Open
+    7400008: claw.003|Open
+    7400010: claw.002|Open
+    7400012: claw.001|Open
+    7400014: claw|Open
+    9500000: //RootNode
+    13700000: claw
+    13700002: claw.001
+    13700004: claw.002
+    13700006: claw.003
+    13700008: claw.004
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Claw_Armature|CLOSE
+      takeName: Claw_Armature|CLOSE
+      firstFrame: 0
+      lastFrame: 10.4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: claw
+        weight: 1
+      - path: claw.001
+        weight: 1
+      - path: claw.002
+        weight: 1
+      - path: claw.003
+        weight: 1
+      - path: claw.004
+        weight: 1
+      - path: Claw_Armature
+        weight: 1
+      - path: Claw_Armature/Claw_Main
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R/Claw_Top_R_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001/Claw_Top_R.001_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002/Claw_Top_R.002_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003/Claw_Top_R.003_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Claw_Armature|Open
+      takeName: Claw_Armature|Open
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: claw
+        weight: 1
+      - path: claw.001
+        weight: 1
+      - path: claw.002
+        weight: 1
+      - path: claw.003
+        weight: 1
+      - path: claw.004
+        weight: 1
+      - path: Claw_Armature
+        weight: 1
+      - path: Claw_Armature/Claw_Main
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R/Claw_Top_R_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001/Claw_Top_R.001_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002/Claw_Top_R.002_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003/Claw_Top_R.003_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Claw_Armature|OPEN
+      takeName: Claw_Armature|OPEN
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: claw
+        weight: 1
+      - path: claw.001
+        weight: 1
+      - path: claw.002
+        weight: 1
+      - path: claw.003
+        weight: 1
+      - path: claw.004
+        weight: 1
+      - path: Claw_Armature
+        weight: 1
+      - path: Claw_Armature/Claw_Main
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R/Claw_Top_R_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001/Claw_Top_R.001_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002/Claw_Top_R.002_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003/Claw_Top_R.003_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: claw.004|Open
+      takeName: claw.004|Open
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: claw
+        weight: 1
+      - path: claw.001
+        weight: 1
+      - path: claw.002
+        weight: 1
+      - path: claw.003
+        weight: 1
+      - path: claw.004
+        weight: 1
+      - path: Claw_Armature
+        weight: 1
+      - path: Claw_Armature/Claw_Main
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R/Claw_Top_R_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001/Claw_Top_R.001_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002/Claw_Top_R.002_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003/Claw_Top_R.003_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: claw.003|Open
+      takeName: claw.003|Open
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: claw
+        weight: 1
+      - path: claw.001
+        weight: 1
+      - path: claw.002
+        weight: 1
+      - path: claw.003
+        weight: 1
+      - path: claw.004
+        weight: 1
+      - path: Claw_Armature
+        weight: 1
+      - path: Claw_Armature/Claw_Main
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R/Claw_Top_R_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001/Claw_Top_R.001_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002/Claw_Top_R.002_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003/Claw_Top_R.003_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: claw.002|Open
+      takeName: claw.002|Open
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: claw
+        weight: 1
+      - path: claw.001
+        weight: 1
+      - path: claw.002
+        weight: 1
+      - path: claw.003
+        weight: 1
+      - path: claw.004
+        weight: 1
+      - path: Claw_Armature
+        weight: 1
+      - path: Claw_Armature/Claw_Main
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R/Claw_Top_R_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001/Claw_Top_R.001_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002/Claw_Top_R.002_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003/Claw_Top_R.003_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: claw.001|Open
+      takeName: claw.001|Open
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: claw
+        weight: 1
+      - path: claw.001
+        weight: 1
+      - path: claw.002
+        weight: 1
+      - path: claw.003
+        weight: 1
+      - path: claw.004
+        weight: 1
+      - path: Claw_Armature
+        weight: 1
+      - path: Claw_Armature/Claw_Main
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R/Claw_Top_R_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001/Claw_Top_R.001_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002/Claw_Top_R.002_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003/Claw_Top_R.003_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: claw|Open
+      takeName: claw|Open
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: claw
+        weight: 1
+      - path: claw.001
+        weight: 1
+      - path: claw.002
+        weight: 1
+      - path: claw.003
+        weight: 1
+      - path: claw.004
+        weight: 1
+      - path: Claw_Armature
+        weight: 1
+      - path: Claw_Armature/Claw_Main
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R/Claw_Top_R_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.001/Claw_Top_R.001_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.002/Claw_Top_R.002_end
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003
+        weight: 1
+      - path: Claw_Armature/Claw_Main/Claw_Top_R.003/Claw_Top_R.003_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
