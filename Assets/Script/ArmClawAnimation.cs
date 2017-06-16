@@ -24,7 +24,7 @@ public class ArmClawAnimation : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.Space))//スぺースでアームが開き始める
+        if (Input.GetKey(KeyCode.X))//スぺースでアームが開き始める
         {
             anim.SetBool("ArmStart", true);
         }
@@ -36,7 +36,7 @@ public class ArmClawAnimation : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // 衝突した相手が運ぶものなら処理をする
-        if (collision.gameObject.name == "運ぶ物")
+        if (collision.gameObject.CompareTag("MovableObj"))
         {
             anim.speed = 0;
 

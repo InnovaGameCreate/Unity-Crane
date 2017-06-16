@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class ArmRotate : MonoBehaviour
 {
-    public GameObject RightArm; //アーム下部
-    public GameObject LeftArm;
-    public GameObject RightArm1; //アーム上部
-    public GameObject LeftArm1;
     public GameObject catchobjcollider; //キャッチあたり判定
     public float RotateSpeed;
 
@@ -18,6 +14,15 @@ public class ArmRotate : MonoBehaviour
     private bool MinRotate; //アームの開く限界角度
     private float valArmRotation;
     private AudioSource[] se = new AudioSource[(int)ArmSe.None];
+
+    private Animator anim;
+    private float defaultSpeed;
+    public Collision arm1;
+    public Collision arm2;
+    public Collision arm3;
+    public Collision arm4;
+    public GameObject a;
+
     //エンジン効果音
     private enum ArmSe
     {
@@ -36,8 +41,10 @@ public class ArmRotate : MonoBehaviour
 
         MaxRotate = false;
         MinRotate = false;
-        valArmRotation = RightArm.transform.rotation.z;
         catchobjcollider = GameObject.Find("Sphere");
+
+        anim = GetComponent<Animator>();
+        defaultSpeed = anim.speed;
 
     }
 
@@ -59,25 +66,23 @@ public class ArmRotate : MonoBehaviour
         //スペースがアーム閉　Cが開
         if (Input.GetKeyDown(KeyCode.C) && !MaxRotate)
         {
-        
-            RightArm.transform.Rotate(0, 0, -RotateSpeed);
-            LeftArm.transform.Rotate(0, 0, RotateSpeed);
-            RightArm1.transform.Rotate(0, 0, RotateSpeed);
-            LeftArm1.transform.Rotate(0, 0, -RotateSpeed);
+
             valArmRotation -= RotateSpeed;
         }
         if (Input.GetKey(KeyCode.X) && !MinRotate)
         {
-
-            RightArm.transform.Rotate(0, 0, RotateSpeed);
-            LeftArm.transform.Rotate(0, 0, -RotateSpeed);
-            RightArm1.transform.Rotate(0, 0, -RotateSpeed);
-            LeftArm1.transform.Rotate(0, 0, RotateSpeed);
             valArmRotation += RotateSpeed;
 
         }
 
         setObjUpdate();
+
+
+        if (Input.GetKey(KeyCode.X))//スぺースでアームが開き始める
+        {
+            anim.SetBool("ArmStart", true);
+        }
+        else anim.SetBool("ArmStart", false);
     }
 
     void setObjUpdate()
@@ -88,6 +93,7 @@ public class ArmRotate : MonoBehaviour
             catchobj.GetComponent<Transform>().position = GetComponent<Transform>().position;
             if (Input.GetKeyDown(KeyCode.C))
             {
+                anim.speed = defaultSpeed;
                 se[(int)ArmSe.Down].Play();
                 catching = false;
                 //for (int i = 0; i < catchobj.transform.childCount; i++)
@@ -121,5 +127,16 @@ public class ArmRotate : MonoBehaviour
         }
 
 
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        // 衝突した相手が運ぶものなら処理をする
+        if (collision.gameObject.CompareTag("MovableObj"))
+        {
+            anim.speed = 0;
+
+            // 衝突した対象(collisionオブジェクト)の色を変更している。
+            //collision.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+        }
     }
 }
