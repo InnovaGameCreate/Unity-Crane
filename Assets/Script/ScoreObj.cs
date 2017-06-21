@@ -9,7 +9,7 @@ public class ScoreObj : MonoBehaviour {
     // Use this for initialization
     void Start () {
         score = GameObject.Find("Canvas/Score").GetComponent<Score>();
- 
+   
     }
 	
 	// Update is called once per frame
