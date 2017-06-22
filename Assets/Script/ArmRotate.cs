@@ -93,6 +93,7 @@ public class ArmRotate : MonoBehaviour
                 //   catchobj.transform.GetChild(i).GetComponent<BoxCollider>().enabled = true;
                 catchobj.GetComponent<BoxCollider>().enabled = true;
                 catchobj.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+                catchobj.transform.GetComponentInChildren<LineRenderer>().enabled = true;//yok追加
                 catchobj = null;
             }
         }
@@ -117,8 +118,14 @@ public class ArmRotate : MonoBehaviour
             // for (int i = 0; i < catchobj.transform.childCount; i++)
             //    catchobj.transform.GetChild(i).GetComponent<BoxCollider>().enabled = false;
             catchobj.GetComponent<BoxCollider>().enabled = false;
+
+            //yok追加
+            //箱のビームを消す
+            catchobj.transform.GetComponentInChildren<LineRenderer>().enabled = false;
         }
 
 
     }
+
+
 }

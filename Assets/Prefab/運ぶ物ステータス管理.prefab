@@ -52,3 +52,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fire: {fileID: 1731187295649882, guid: 701cacb62cef185419ae3143befe091f, type: 2}
+  BoxMaxHP: 100
+  BoxNowHP: 0

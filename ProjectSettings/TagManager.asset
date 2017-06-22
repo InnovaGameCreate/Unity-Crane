@@ -6,6 +6,13 @@ TagManager:
   tags:
   - MovableObj
   - Stage
+  - Enemy
+  - ScoreObj
+  - Lighter
+  - Crane
+  - SnowBall
+  - Fuel
+  - Heavier
   layers:
   - Default
   - TransparentFX
@@ -19,7 +26,7 @@ TagManager:
   - crane
   - Himo
   - 
-  - 
+  - BoxBeam
   - 
   - 
   - 
@@ -48,4 +55,7 @@ TagManager:
     locked: 0
   - name: CraneBody
     uniqueID: 584180057
+    locked: 0
+  - name: BoxBeam
+    uniqueID: 1506203553
     locked: 0
