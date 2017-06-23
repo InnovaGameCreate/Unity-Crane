@@ -58,13 +58,14 @@ public class SimpleCarController : MonoBehaviour
 
     void Update()
     {
+
         Vector3 rot = GetComponent<Transform>().localRotation.eulerAngles;
         rot = new Vector3(rot.x, rot.y, 0);
         GetComponent<Transform>().localRotation = Quaternion.Euler(rot);
         //前方向速度取得
         fwdSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, transform.forward);
         speedmeter.ChangeNowSpeed(Mathf.Abs(fwdSpeed));
-        //Debug.Log(fwdSpeed);
+   
         if (fwdSpeed > 1 && checkse == true)
         {
             if (count == 0)
@@ -174,10 +175,23 @@ public class SimpleCarController : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.CompareTag("Stage") || (armrotate.get_catching()==false&& collider.CompareTag("MovableObj")))
-            if (!se[(int)EngineSe.Damage].isPlaying && fwdSpeed > 3)
+        if (collider.CompareTag("Stage") || (armrotate.get_catching() == false && collider.CompareTag("MovableObj")))
+        {
+            if (!se[(int)EngineSe.Damage].isPlaying && get_fwdspeed() > 10)
                 se[(int)EngineSe.Damage].Play();
 
+            if (armrotate.get_catching()) {
+                if (get_fwdspeed() > 30)
+                    armrotate.get_catchobj().GetComponent<TargetStatus>().damageset(8);
+                else if (get_fwdspeed() > 20)
+                    armrotate.get_catchobj().GetComponent<TargetStatus>().damageset(5);
+                else if (get_fwdspeed() > 10)
+                    armrotate.get_catchobj().GetComponent<TargetStatus>().damageset(2);
+            }
+
+
+
+        }
 
 
 

@@ -100,6 +100,10 @@ public class ArmRotate : MonoBehaviour
 
     }
 
+    public GameObject get_catchobj()
+    {
+        return catchobj;
+    }
    public bool get_catching()
     {
         return catching;

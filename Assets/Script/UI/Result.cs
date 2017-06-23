@@ -37,8 +37,8 @@ public class Result : MonoBehaviour {
         time.text = "残り時間：" + ((int)Timer.time_).ToString() + " s"+" = "+ timep.ToString()+" point";
         int scorep= (int)ScoreTotal.score_;
         score.text = "スコア："+scorep.ToString()+" point";
-        int hpp = 0;
-        hp.text = "荷物耐久値：" + hpp.ToString() + " point";
+        int hpp = (int)BoxGaugeNow.now_box_;
+        hp.text = "荷物耐久値：" + (hpp * 10).ToString() + " point";
         int totalp = timep + scorep;
         total.text = "TOTAL：" +totalp.ToString() + " point";
         if (totalp > rankS_border)
