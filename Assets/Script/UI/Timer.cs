@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-
-    public float time_ = 180.0f;//180秒に設定
+    public float settime_ = 180.0f;//180秒に設定
+    [System.NonSerialized]
+    public static float time_;
     private Text text_;
     private int minute;
     private int second;
@@ -15,6 +16,7 @@ public class Timer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        time_ = settime_;
         text_ = GetComponent<Text>();
     }
 

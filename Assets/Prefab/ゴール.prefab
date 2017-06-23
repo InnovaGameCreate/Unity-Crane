@@ -159,6 +159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d878a848a90bb498227fda3a85ab44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  armrotate: {fileID: 0}
+  clearui: {fileID: 0}
 --- !u!198 &198624016880298364
 ParticleSystem:
   m_ObjectHideFlags: 1

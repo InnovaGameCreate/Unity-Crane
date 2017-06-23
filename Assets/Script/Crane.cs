@@ -23,11 +23,10 @@ public class Crane : MonoBehaviour {
         else if (Input.GetKey(KeyCode.S))
         {
             rot = new Vector3(rot.x + MoveSpeed, rot.y, rot.z );
-            if (rot.x >271)
+            if (rot.x >273)
                 transform.Rotate(new Vector3(1, 0, 0), MoveSpeed);
      
         }
 
-        Debug.Log(rot.x);
     }
 }

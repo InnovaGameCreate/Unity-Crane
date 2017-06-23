@@ -13,12 +13,15 @@ public class SimpleCarController : MonoBehaviour
     public WheelCollider RearRight;//後輪
     public WheelCollider RearLeft;
     private SpeedMeter speedmeter;       //スピードメーター
-
+    private ArmRotate armrotate;    //クレーンのArmを指定
     private AudioSource[] se = new AudioSource[(int)EngineSe.None];
     private bool checkse = false;           //エンジン音切り替えフラグ
     private float count;                    //スタートエンジン音終了までのカウント
     private bool brakingflag = false;       //ブレーキフラグ Se用
     private float fwdSpeed;                   //前進速度
+    private int boostcount;             //ブーストカウント
+    private FuelGaugeNow fuel;            //燃料インスタンス
+    
     float Breaking = 10000;
 
     private Rigidbody rb;
@@ -31,6 +34,7 @@ public class SimpleCarController : MonoBehaviour
         Running,
         Braking,
         Damage,
+        Boost,
         None
     }
     void Start()
@@ -47,7 +51,9 @@ public class SimpleCarController : MonoBehaviour
         RearRight.steerAngle = 0;
 
         rb = GetComponent<Rigidbody>();
-       speedmeter = transform.Find("/Canvas/SpeedMeter").GetComponent<SpeedMeter>();
+        speedmeter = transform.Find("/Canvas/SpeedMeter").GetComponent<SpeedMeter>();
+        armrotate = GameObject.Find("Craneまとめ/Himo/CreanCar_Claw").GetComponent<ArmRotate>();
+        fuel = GameObject.Find("/Canvas/Fuel/FuelGaugeNow").GetComponent<FuelGaugeNow>();
     }
 
     void Update()
@@ -87,18 +93,30 @@ public class SimpleCarController : MonoBehaviour
             checkse = true;
         }
 
-       
+
         //重心計算
         // rb.ResetCenterOfMass();
         //   Vector3 mass = rb.centerOfMass;
         // mass.y -= 1;
         //rb.centerOfMass = mass;
-
-        //移動
+        Vector3 forwarded=new Vector3( transform.forward.x, -0.5f, transform.forward.z);
+        if (fuel.Now_fuel_ >=250&&  boostcount == 0 && Input.GetKeyDown(KeyCode.B))
+        {
+            fuel.ChangeNowFuel(-250);
+            boostcount = 1;
+            se[(int)EngineSe.Boost].Play();
+        }
+        if (boostcount>0)
+        {
+            GetComponent<Rigidbody>().AddForce(forwarded, ForceMode.VelocityChange); ;
+            if (boostcount++ > 10)
+                boostcount = 0;
+        }
+            //移動
         if (Input.GetKey(KeyCode.UpArrow))
         {
             RearRight.motorTorque = RearLeft.motorTorque = Speed;
-            brakingflag =true;
+            brakingflag = true;
         }
         else if (Input.GetKey(KeyCode.DownArrow))
             RearRight.motorTorque = RearLeft.motorTorque = -Speed;
@@ -107,14 +125,14 @@ public class SimpleCarController : MonoBehaviour
 
 
         //タイヤの角度変更(なぜかＷＡＳＤでも動いた)
-        if (Input.GetKey(KeyCode.RightArrow) && FrontRight.steerAngle <  + Maxsteer)
+        if (Input.GetKey(KeyCode.RightArrow) && FrontRight.steerAngle < +Maxsteer)
         {
             FrontRight.steerAngle += RotateSpeed;
             FrontLeft.steerAngle += RotateSpeed;
 
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) && FrontRight.steerAngle >  - Maxsteer)
+        if (Input.GetKey(KeyCode.LeftArrow) && FrontRight.steerAngle > -Maxsteer)
         {
             FrontRight.steerAngle -= RotateSpeed;
             FrontLeft.steerAngle -= RotateSpeed;
@@ -145,6 +163,10 @@ public class SimpleCarController : MonoBehaviour
         // se[(int)EngineSe.Braking].Stop();
     }
 
+    public void set_speed(float set)
+    {
+        Speed = set;
+    }
     public float get_fwdspeed()
     {
         return fwdSpeed;
@@ -152,8 +174,12 @@ public class SimpleCarController : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if(!se[(int)EngineSe.Damage].isPlaying&& fwdSpeed >3)
-        se[(int)EngineSe.Damage].Play();
+        if (collider.CompareTag("Stage") || (armrotate.get_catching()==false&& collider.CompareTag("MovableObj")))
+            if (!se[(int)EngineSe.Damage].isPlaying && fwdSpeed > 3)
+                se[(int)EngineSe.Damage].Play();
+
+
+
 
     }
 }
