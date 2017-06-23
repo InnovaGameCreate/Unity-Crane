@@ -12,6 +12,10 @@ public class TargetStatus : MonoBehaviour
     private GameObject fireobj;  //生成した炎obj  
     public GameObject fire;     //炎
     private AudioSource[] se = new AudioSource[2];
+    private int hp = 100;       //耐久値
+    private int nexthp = -1;         //減った後の耐久値
+    private const int firedamage = 10;    //炎で減る耐久値の量
+    private bool decreasehp;        //hpが減るかどうか
     enum Status
     {
         Heavier,
@@ -30,9 +34,31 @@ public class TargetStatus : MonoBehaviour
             se[i] = audioSources[i];
     }
 
+    //箱の耐久値を減らす
+    public void damageset(int damage)
+    {
+        if (!decreasehp) {
+            nexthp = hp - damage;
+            decreasehp = true;
+        } else
+            nexthp = nexthp - damage;
+
+        if (nexthp < 0)
+            nexthp = 0;
+      
+    }
+    private void decreaseHp()
+    {
+        if (nexthp < hp)
+            hp--;
+        else if (nexthp == hp)
+            decreasehp = false;
+    }
     // Update is called once per frame
     void Update()
     {
+        decreaseHp();
+        Debug.Log(hp);
         switch (boxstatus)
         {
             case Status.Heavier:
@@ -103,6 +129,7 @@ public class TargetStatus : MonoBehaviour
         {
             fireobj = Instantiate(fire, transform.position, crane.transform.rotation);
             fireobj.transform.parent = transform;
+            damageset(20);
         }
     }
 }

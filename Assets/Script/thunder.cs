@@ -8,7 +8,7 @@ public class thunder : MonoBehaviour {
     private TargetStatus boxst;  //箱状態
 	// Use this for initialization
 	void Start () {
-        boxst = GameObject.Find("運ぶ物").GetComponent<TargetStatus>();
+   //     boxst = GameObject.Find("運ぶ物").GetComponent<TargetStatus>();
 		
 	}
 	
@@ -25,7 +25,7 @@ public class thunder : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("MovableObj"))
-            boxst.burn();
+            other.gameObject.GetComponent<TargetStatus>().burn();
     }
 }
 
