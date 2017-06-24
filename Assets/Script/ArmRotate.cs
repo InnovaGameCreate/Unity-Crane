@@ -83,6 +83,9 @@ public class ArmRotate : MonoBehaviour
             anim.SetBool("ArmStart", true);
         }
         else anim.SetBool("ArmStart", false);
+
+
+
     }
 
     void setObjUpdate()
@@ -107,7 +110,7 @@ public class ArmRotate : MonoBehaviour
 
     }
 
-   public bool get_catching()
+    public bool get_catching()
     {
         return catching;
     }
@@ -128,15 +131,29 @@ public class ArmRotate : MonoBehaviour
 
 
     }
+    void OnTriggerExit(Collider collision)
+    {
+        anim.speed = defaultSpeed;
+        print("TriggerExit");
+
+    }
+    void OnCollisionExit(Collision collision)
+    {
+        print("CollisionExit");
+        anim.speed = defaultSpeed;
+
+    }
     void OnCollisionEnter(Collision collision)
     {
         // 衝突した相手が運ぶものなら処理をする
         if (collision.gameObject.CompareTag("MovableObj"))
         {
             anim.speed = 0;
-
+            print("hit");
             // 衝突した対象(collisionオブジェクト)の色を変更している。
-            //collision.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+          //  collision.gameObject.GetComponent<Renderer>().material.color = Color.blue;
         }
+        
+           
     }
 }
