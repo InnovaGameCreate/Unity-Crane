@@ -8,7 +8,8 @@ public class FuelGaugeNow : MonoBehaviour
 
     private RectTransform rect_;
     private float max_width_;
-    float now_fuel_;
+    private float now_fuel_;
+
     public float Now_fuel_
     {
         get { return now_fuel_; }
