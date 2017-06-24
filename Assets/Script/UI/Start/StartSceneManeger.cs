@@ -7,6 +7,8 @@ public class StartSceneManeger : MonoBehaviour
 {
     [SerializeField]
     private Canvas select_canvas;
+    [SerializeField]
+    private Canvas start_canvas;
 
     private void Start()
     {
@@ -15,7 +17,14 @@ public class StartSceneManeger : MonoBehaviour
 
     public void EnableSelectCanvas()
     {
+        start_canvas.enabled = false;
         select_canvas.enabled = true;
+    }
+
+    public void EnableStartCanvas()
+    {
+        start_canvas.enabled = true;
+        select_canvas.enabled = false;
     }
 
     public void LoadScene1()
