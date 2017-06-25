@@ -53,6 +53,6 @@ public class StartSceneManeger : MonoBehaviour
 
     public void LoadScene3()
     {
-        StartCoroutine(CountdownCoroutine(""));
+        StartCoroutine(CountdownCoroutine("unity-stage(forest) 1"));
     }
 }
