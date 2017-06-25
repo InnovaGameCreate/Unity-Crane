@@ -41,17 +41,17 @@ public class StartSceneManeger : MonoBehaviour
         SceneManager.LoadScene(scene_name);
     }
 
-    public void LoadScene1()
+    public void LoadSceneTown()
     {
         StartCoroutine(CountdownCoroutine("StageTown"));
     }
 
-    public void LoadScene2()
+    public void LoadSceneWilderness()
     {
         StartCoroutine(CountdownCoroutine("stage2"));
     }
 
-    public void LoadScene3()
+    public void LoadSceneForest()
     {
         StartCoroutine(CountdownCoroutine("unity-stage(forest) 1"));
     }

@@ -627,7 +627,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 301114250}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.19412228
+  m_Size: 0.19393134
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1370,7 +1370,7 @@ GameObject:
   - component: {fileID: 274816554}
   - component: {fileID: 274816553}
   m_Layer: 5
-  m_Name: Stage3
+  m_Name: Forest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1434,7 +1434,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 431937847}
-        m_MethodName: LoadScene3
+        m_MethodName: LoadSceneForest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4267,7 +4267,7 @@ GameObject:
   - component: {fileID: 1327966294}
   - component: {fileID: 1327966293}
   m_Layer: 5
-  m_Name: Stage1
+  m_Name: Town
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4331,7 +4331,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 431937847}
-        m_MethodName: LoadScene1
+        m_MethodName: LoadSceneTown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4890,7 +4890,7 @@ GameObject:
   - component: {fileID: 1462097454}
   - component: {fileID: 1462097453}
   m_Layer: 5
-  m_Name: Stage2
+  m_Name: Wilderness
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4954,7 +4954,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 431937847}
-        m_MethodName: LoadScene2
+        m_MethodName: LoadSceneWilderness
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
