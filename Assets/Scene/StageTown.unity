@@ -1394,6 +1394,16 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: 1561.9994
       objectReference: {fileID: 0}
+    - target: {fileID: 114466897080333410, guid: 9c35afe52f825fe4d9508bb9ded25bc9,
+        type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 7f6abee83f930284f8c68d9fdb2f56fc, type: 3}
+    - target: {fileID: 114641927009633976, guid: 9c35afe52f825fe4d9508bb9ded25bc9,
+        type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: c784a34807ccd4e409f64cad6f8b009d, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c35afe52f825fe4d9508bb9ded25bc9, type: 2}
   m_IsPrefabParent: 0
