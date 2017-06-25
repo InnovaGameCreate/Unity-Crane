@@ -13,6 +13,13 @@ public class StartSceneManeger : MonoBehaviour
     [System.NonSerialized]
     public static Stage selected_stage;
 
+    //カウントダウン音用
+    private AudioSource audio_source;//AudioSource
+    [SerializeField]
+    private AudioClip countdown_se;
+    [SerializeField]
+    private AudioClip countdown_go_se;
+
     [SerializeField]
     private Text textCountdown;
 
@@ -24,6 +31,7 @@ public class StartSceneManeger : MonoBehaviour
         textCountdown.text = "";
         textCountdown.gameObject.SetActive(false);
         imageMask.gameObject.SetActive(false);
+        audio_source = GetComponent<AudioSource>();
     }
 
     //カウントダウンタイマー
@@ -33,15 +41,19 @@ public class StartSceneManeger : MonoBehaviour
         textCountdown.gameObject.SetActive(true);
 
         textCountdown.text = "3";
+        audio_source.PlayOneShot(countdown_se);
         yield return new WaitForSeconds(1.0f);
 
         textCountdown.text = "2";
+        audio_source.PlayOneShot(countdown_se);
         yield return new WaitForSeconds(1.0f);
 
         textCountdown.text = "1";
+        audio_source.PlayOneShot(countdown_se);
         yield return new WaitForSeconds(1.0f);
 
         textCountdown.text = "GO!";
+        audio_source.PlayOneShot(countdown_go_se);
         yield return new WaitForSeconds(1.0f);
 
         SceneManager.LoadScene(scene_name);
