@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class StartSceneManeger : MonoBehaviour
 {
+    //ステージ
+    public enum Stage { Town, Wilderness, Forest }
+
+    //選択されたステージ
+    [System.NonSerialized]
+    public static Stage selected_stage;
 
     [SerializeField]
     private Text textCountdown;
@@ -43,16 +49,19 @@ public class StartSceneManeger : MonoBehaviour
 
     public void LoadSceneTown()
     {
+        selected_stage = Stage.Town;
         StartCoroutine(CountdownCoroutine("StageTown"));
     }
 
     public void LoadSceneWilderness()
     {
+        selected_stage = Stage.Wilderness;
         StartCoroutine(CountdownCoroutine("stage2"));
     }
 
     public void LoadSceneForest()
     {
+        selected_stage = Stage.Forest;
         StartCoroutine(CountdownCoroutine("unity-stage(forest) 1"));
     }
 }

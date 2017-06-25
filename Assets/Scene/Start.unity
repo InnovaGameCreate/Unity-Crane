@@ -1369,6 +1369,7 @@ GameObject:
   - component: {fileID: 274816555}
   - component: {fileID: 274816554}
   - component: {fileID: 274816553}
+  - component: {fileID: 274816556}
   m_Layer: 5
   m_Name: Forest
   m_TagString: Untagged
@@ -1479,6 +1480,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 274816551}
+--- !u!114 &274816556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 274816551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2534f85293419004c915437d99ea97ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage: 2
+  s_rank_image: {fileID: 1307850696934032, guid: 9fe703c691dc7304e82ff7dfda181954,
+    type: 2}
+  a_rank_image: {fileID: 1946088930064790, guid: 27f922ced05abe14fa2ee52ef272a80f,
+    type: 2}
+  b_rank_image: {fileID: 1736512392486444, guid: 72d7983afc0d09640ac9303cbbd0f0f1,
+    type: 2}
+  c_rank_image: {fileID: 1307603148566920, guid: ed01cb1c9313e42479e668b06182a906,
+    type: 2}
 --- !u!1 &293020179
 GameObject:
   m_ObjectHideFlags: 0
@@ -4266,6 +4287,7 @@ GameObject:
   - component: {fileID: 1327966295}
   - component: {fileID: 1327966294}
   - component: {fileID: 1327966293}
+  - component: {fileID: 1327966296}
   m_Layer: 5
   m_Name: Town
   m_TagString: Untagged
@@ -4376,6 +4398,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1327966291}
+--- !u!114 &1327966296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1327966291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2534f85293419004c915437d99ea97ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage: 0
+  s_rank_image: {fileID: 1307850696934032, guid: 9fe703c691dc7304e82ff7dfda181954,
+    type: 2}
+  a_rank_image: {fileID: 1946088930064790, guid: 27f922ced05abe14fa2ee52ef272a80f,
+    type: 2}
+  b_rank_image: {fileID: 1736512392486444, guid: 72d7983afc0d09640ac9303cbbd0f0f1,
+    type: 2}
+  c_rank_image: {fileID: 1307603148566920, guid: ed01cb1c9313e42479e668b06182a906,
+    type: 2}
 --- !u!1 &1367496619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4889,6 +4931,7 @@ GameObject:
   - component: {fileID: 1462097455}
   - component: {fileID: 1462097454}
   - component: {fileID: 1462097453}
+  - component: {fileID: 1462097456}
   m_Layer: 5
   m_Name: Wilderness
   m_TagString: Untagged
@@ -4999,6 +5042,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1462097451}
+--- !u!114 &1462097456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1462097451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2534f85293419004c915437d99ea97ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage: 1
+  s_rank_image: {fileID: 1307850696934032, guid: 9fe703c691dc7304e82ff7dfda181954,
+    type: 2}
+  a_rank_image: {fileID: 1946088930064790, guid: 27f922ced05abe14fa2ee52ef272a80f,
+    type: 2}
+  b_rank_image: {fileID: 1736512392486444, guid: 72d7983afc0d09640ac9303cbbd0f0f1,
+    type: 2}
+  c_rank_image: {fileID: 1307603148566920, guid: ed01cb1c9313e42479e668b06182a906,
+    type: 2}
 --- !u!1 &1478770240
 GameObject:
   m_ObjectHideFlags: 0

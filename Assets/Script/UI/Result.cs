@@ -11,6 +11,7 @@ public class Result : MonoBehaviour
     private Text hp;
     private Text total;
     private GameObject[] rank = new GameObject[4];
+    private int rank_for_save;
 
     //ランク決定基準
     public int rankS_border;
@@ -43,16 +44,28 @@ public class Result : MonoBehaviour
         hp.text = "荷物耐久値：" + (hpp * 10).ToString() + " point";
         int totalp = timep + scorep;
         total.text = "TOTAL：" + totalp.ToString() + " point";
+
+        //ランク決め
         if (totalp > rankS_border)
+        {
             rank[0].SetActive(true);
+            rank_for_save = 'S';
+        }
         else if (totalp > rankA_border)
+        {
             rank[1].SetActive(true);
+            rank_for_save = 'A';
+        }
         else if (totalp > rankB_border)
+        {
             rank[2].SetActive(true);
+            rank_for_save = 'B';
+        }
         else
+        {
             rank[3].SetActive(true);
-
-
+            rank_for_save = 'C';
+        }
     }
 
     // Update is called once per frame
@@ -66,7 +79,7 @@ public class Result : MonoBehaviour
         }
         if (scenechange && !GetComponent<AudioSource>().isPlaying)
         {
-
+            PlayerPrefs.SetInt("" + StartSceneManeger.selected_stage, rank_for_save);//ランクをセーブ
             SceneManager.LoadScene("Start");
         }
 
