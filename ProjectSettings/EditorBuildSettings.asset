@@ -12,5 +12,11 @@ EditorBuildSettings:
     path: Assets/Scene/stage2.unity
     guid: dea949856a8174b498f53db96b774d2d
   - enabled: 1
+    path: Assets/Scene/unity-stage(forest) 1.unity
+    guid: 36bf690993cceb04187bd89e8f5c8e10
+  - enabled: 1
     path: Assets/Scene/StageTown.unity
-    guid: 00000000000000000000000000000000
+    guid: 52287e25808bff14fa968498cd5dea87
+  - enabled: 1
+    path: Assets/Scene/Result.unity
+    guid: afa13fca76af5864cabdb0bcd738f147
