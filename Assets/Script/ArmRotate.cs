@@ -10,10 +10,18 @@ public class ArmRotate : MonoBehaviour
 
     private bool catching = false; //持ってるかどうか
     private GameObject catchobj; //つかんだオブジェクト
+    private GameObject catchobjpos;// 掴む位置用のオブジェクト（透明)
+    private GameObject Claw;    //爪（角度計算に使う）
+    private GameObject Crane; //クレーン（角度計算に使う)
     private bool MaxRotate; //アームの閉じる限界角度
     private bool MinRotate; //アームの開く限界角度
     private float valArmRotation;
+    private float relClawRot;//相対的な詰めの角度
+    private AnimatorStateInfo animinfo;//現在のアニメーションの状態
     private AudioSource[] se = new AudioSource[(int)ArmSe.None];
+
+
+    private bool test;//テスト
 
     private Animator anim;
     private float defaultSpeed;
@@ -42,15 +50,22 @@ public class ArmRotate : MonoBehaviour
         MaxRotate = false;
         MinRotate = false;
         catchobjcollider = GameObject.Find("Sphere");
+        catchobjpos = GameObject.Find("CatchPos");
+        Claw = GameObject.Find("Claw_Top_R");
+        Crane = GameObject.Find("CraneCar");
+      /*  if (catchobjpos == null)
+            print("NULL");
+        else
+            print("ok");*/
 
         anim = GetComponent<Animator>();
         defaultSpeed = anim.speed;
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        animinfo = anim.GetCurrentAnimatorStateInfo(0);
 
         //アームの開閉の限界判定（rotation.zで判定すると揺れでzのrotationが変化するため不規則になる)
         if (valArmRotation <= -20)//ここらへんごり押し
@@ -81,22 +96,37 @@ public class ArmRotate : MonoBehaviour
         if (Input.GetKey(KeyCode.X))//スぺースでアームが開き始める
         {
             anim.SetBool("ArmStart", true);
+            test = false;
+
         }
         else anim.SetBool("ArmStart", false);
 
 
+        //相対的な爪の角度
+        relClawRot = Claw.transform.eulerAngles.y - Crane.transform.eulerAngles.y;
 
+        if (animinfo.fullPathHash == Animator.StringToHash("Base Layer.Idle"))
+        {
+            anim.SetBool("CatchEnd", false);
+        }
+        if (test == true)
+            anim.SetBool("CatchEnd", true);
+
+      
     }
 
     void setObjUpdate()
     {
         if (catching)
         {
-
-            catchobj.GetComponent<Transform>().position = GetComponent<Transform>().position;
+            anim.speed = 0;//爪は掴んでいる間は停止
+            if(test == false)
+            catchobj.GetComponent<Transform>().position = catchobjpos.GetComponent<Transform>().position;
             if (Input.GetKeyDown(KeyCode.C))
             {
-                anim.speed = defaultSpeed;
+                test = true;
+                anim.SetBool("CatchEnd", true);
+                anim.speed =  defaultSpeed;
                 se[(int)ArmSe.Down].Play();
                 catching = false;
                 //for (int i = 0; i < catchobj.transform.childCount; i++)
@@ -117,7 +147,15 @@ public class ArmRotate : MonoBehaviour
 
     void OnTriggerStay(Collider collider)
     {
-        if (Input.GetKeyDown(KeyCode.X) && collider.CompareTag("MovableObj"))
+      
+
+       // print(anim.GetBool("test"));
+        if (/*Input.GetKeyDown(KeyCode.X) &&*/ collider.CompareTag("MovableObj")//一定の角度でのみcatching判定に
+            && relClawRot > 160.0
+            && relClawRot < 174.5
+           // && anim.GetCurrentAnimatorStateInfo(0).IsTag("CLOSE")
+            && anim.GetBool("CatchEnd") == false
+            && test ==false)
         {
             se[(int)ArmSe.Up].Play();
             catching = true;
@@ -126,7 +164,7 @@ public class ArmRotate : MonoBehaviour
             //あたり判定一時的に無効
             // for (int i = 0; i < catchobj.transform.childCount; i++)
             //    catchobj.transform.GetChild(i).GetComponent<BoxCollider>().enabled = false;
-            catchobj.GetComponent<BoxCollider>().enabled = false;
+           catchobj.GetComponent<BoxCollider>().enabled = false;
         }
 
 
@@ -134,12 +172,12 @@ public class ArmRotate : MonoBehaviour
     void OnTriggerExit(Collider collision)
     {
         anim.speed = defaultSpeed;
-        print("TriggerExit");
+        //print("TriggerExit");
 
     }
     void OnCollisionExit(Collision collision)
     {
-        print("CollisionExit");
+        //print("CollisionExit");
         anim.speed = defaultSpeed;
 
     }
@@ -149,7 +187,7 @@ public class ArmRotate : MonoBehaviour
         if (collision.gameObject.CompareTag("MovableObj"))
         {
             anim.speed = 0;
-            print("hit");
+           // print("hit");
             // 衝突した対象(collisionオブジェクト)の色を変更している。
           //  collision.gameObject.GetComponent<Renderer>().material.color = Color.blue;
         }
