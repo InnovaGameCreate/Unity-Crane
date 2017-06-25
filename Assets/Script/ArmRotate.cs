@@ -121,6 +121,7 @@ public class ArmRotate : MonoBehaviour
             // for (int i = 0; i < catchobj.transform.childCount; i++)
             //    catchobj.transform.GetChild(i).GetComponent<BoxCollider>().enabled = false;
             catchobj.GetComponent<BoxCollider>().enabled = false;
+            catchobj.transform.GetComponentInChildren<LineRenderer>().enabled = false;
         }
 
 
