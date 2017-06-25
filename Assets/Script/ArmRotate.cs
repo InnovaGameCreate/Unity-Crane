@@ -103,7 +103,7 @@ public class ArmRotate : MonoBehaviour
 
 
         //相対的な爪の角度
-        relClawRot = Claw.transform.eulerAngles.y - Crane.transform.eulerAngles.y;
+        relClawRot = Claw.transform.eulerAngles.z - Crane.transform.eulerAngles.z;
 
         if (animinfo.fullPathHash == Animator.StringToHash("Base Layer.Idle"))
         {
@@ -149,10 +149,10 @@ public class ArmRotate : MonoBehaviour
     {
       
 
-       // print(anim.GetBool("test"));
+       // print(relClawRot);
         if (/*Input.GetKeyDown(KeyCode.X) &&*/ collider.CompareTag("MovableObj")//一定の角度でのみcatching判定に
-            && relClawRot > 160.0
-            && relClawRot < 174.5
+            && relClawRot > 120
+            && relClawRot < 150
            // && anim.GetCurrentAnimatorStateInfo(0).IsTag("CLOSE")
             && anim.GetBool("CatchEnd") == false
             && test ==false)
