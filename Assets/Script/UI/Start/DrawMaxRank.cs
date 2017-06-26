@@ -41,6 +41,7 @@ public class DrawMaxRank : MonoBehaviour
                 max_rank_image = Instantiate(c_rank_image, transform.position, Quaternion.identity);
                 break;
         }
+
         //画像は自分の子要素とする
         max_rank_image.transform.parent = transform;
         //位置調節
