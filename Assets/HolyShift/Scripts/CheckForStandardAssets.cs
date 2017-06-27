@@ -1,6 +1,4 @@
-﻿//エラー出るので修正
-#if UNITY_EDITOR
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -19,4 +17,3 @@ public class CheckForStandardAssets : MonoBehaviour {
 		
 	}
 }
-#endif

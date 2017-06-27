@@ -12,12 +12,6 @@ public class TargetStatus : MonoBehaviour
     private GameObject fireobj;  //生成した炎obj  
     public GameObject fire;     //炎
     private AudioSource[] se = new AudioSource[2];
-    private int hp = 100;       //耐久値
-    private int nexthp = -1;         //減った後の耐久値
-    private const int firedamage = 10;    //炎で減る耐久値の量
-    private bool decreasehp;        //hpが減るかどうか
-    private float burncount;    //燃えるかどうか補正
-    private BoxGaugeNow box;            //箱ゲージインスタンス
     enum Status
     {
         Heavier,
@@ -34,39 +28,11 @@ public class TargetStatus : MonoBehaviour
         AudioSource[] audioSources = GetComponents<AudioSource>();
         for (int i = 0; i < 2; i++)
             se[i] = audioSources[i];
-        box = GameObject.Find("/Canvas/Boxhp/BoxGaugeNow").GetComponent<BoxGaugeNow>();
     }
 
-    //箱の耐久値を減らす
-    public void damageset(int damage)
-    {
-        box.ChangeNowBox(-damage);
-        //if (!decreasehp) {
-        //    nexthp = hp - damage;
-        //    decreasehp = true;
-        //} else
-        //    nexthp = nexthp - damage;
-
-        //if (nexthp < 0)
-        //    nexthp = 0;
-      
-    }
-    private void decreaseHp()
-    {
-        if (decreasehp&&nexthp < hp)
-            hp--;
-        else if (nexthp == hp)
-            decreasehp = false;
- 
-    }
     // Update is called once per frame
     void Update()
     {
-        if (burncount > 0)
-            burncount -= Time.deltaTime;
-       // decreaseHp();
-
-//        Debug.Log(hp);
         switch (boxstatus)
         {
             case Status.Heavier:
@@ -106,9 +72,6 @@ public class TargetStatus : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
- 
-
-
         if (other.CompareTag("Heavier"))
         {
             se[0].Play();
@@ -136,13 +99,10 @@ public class TargetStatus : MonoBehaviour
     //燃える
     public void burn()
     {
-        if (burncount <= 0&&GameObject.Find("運ぶ物/炎(Clone)") == null)
+        if (GameObject.Find("運ぶ物/炎(Clone)") == null)
         {
             fireobj = Instantiate(fire, transform.position, crane.transform.rotation);
             fireobj.transform.parent = transform;
-                burncount = 3;
-            //引数の3倍のダメージ
-            damageset(15);
         }
     }
 }
