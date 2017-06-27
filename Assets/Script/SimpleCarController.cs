@@ -52,7 +52,7 @@ public class SimpleCarController : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         speedmeter = transform.Find("/Canvas/SpeedMeter").GetComponent<SpeedMeter>();
-        armrotate = GameObject.Find("Craneまとめ/Himo/CreanCar_Claw").GetComponent<ArmRotate>();
+        armrotate = GameObject.Find("Craneまとめ/Himo/ハサミ機NEW").GetComponent<ArmRotate>();
         fuel = GameObject.Find("/Canvas/Fuel/FuelGaugeNow").GetComponent<FuelGaugeNow>();
     }
 

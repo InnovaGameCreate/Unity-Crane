@@ -33,7 +33,7 @@ public class TargetStatus : MonoBehaviour
     void Start()
     {
         crane = GameObject.Find("Craneまとめ/CraneCar");
-        arm = GameObject.Find("Craneまとめ/Himo/CreanCar_Claw").GetComponent<ArmRotate>();
+        arm = GameObject.Find("Craneまとめ/Himo/ハサミ機NEW").GetComponent<ArmRotate>();
 
         //se関連
         AudioSource[] audioSources = GetComponents<AudioSource>();
