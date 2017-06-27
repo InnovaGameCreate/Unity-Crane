@@ -30,19 +30,12 @@ public class BoxGaugeNow : MonoBehaviour
     void Update()
     {
         Vector2 size = rect_.sizeDelta;
-        size.x = max_width_ * (pre_box_ / max_box_);
-        if (now_box_ < pre_box_)
-            pre_box_ -= 0.1f;
+        size.x = max_width_ * (now_box_/ max_box_);
         rect_.sizeDelta = size;
     }
 
-    public void ChangeNowBox(float diff)
+    public void ChangeNowBox(float val)
     {
-        now_box_ += diff;
-        //ラップする
-        if (now_box_ > max_box_)
-            now_box_ = max_box_;
-        if (now_box_ < 0)
-            now_box_ = 0;
+        now_box_ = val;
     }
 }

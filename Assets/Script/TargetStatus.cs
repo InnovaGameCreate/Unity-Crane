@@ -43,30 +43,24 @@ public class TargetStatus : MonoBehaviour
     }
 
     //箱の耐久値を減らす
-    public void damageset(int damage)
+    public void damageset()
     {
-        box.ChangeNowBox(-damage);
-        //if (!decreasehp) {
-        //    nexthp = hp - damage;
-        //    decreasehp = true;
-        //} else
-        //    nexthp = nexthp - damage;
-
-        //if (nexthp < 0)
-        //    nexthp = 0;
-
+        box.ChangeNowBox(hp);
     }
-    private void decreaseHp()
+
+    private void decreaseHp(int diff)
     {
-        if (decreasehp && nexthp < hp)
-            hp--;
-        else if (nexthp == hp)
-            decreasehp = false;
+        hp += diff;
+        if (hp < 0)
+            hp = 0;
+        else if (hp > 100)
+            hp = 100;
 
     }
     // Update is called once per frame
     void Update()
     {
+        damageset();
         if (burncount > 0)
             burncount -= Time.deltaTime;
         // decreaseHp();
@@ -139,14 +133,15 @@ public class TargetStatus : MonoBehaviour
 
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        //ステージと衝突しているとき
-        if (other.CompareTag("Stage"))
-        {
-            damageset(1);
-        }
-    }
+    //床とステージの区別がめんどいのでコメントアウト
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    //ステージと衝突しているとき
+    //    if (other.CompareTag("Stage"))
+    //    {
+    //        decreaseHp(-10);
+    //    }
+    //}
 
     //燃える
     public void burn()
@@ -157,7 +152,7 @@ public class TargetStatus : MonoBehaviour
             fireobj.transform.parent = transform;
             burncount = 3;
             //引数の3倍のダメージ
-            damageset(15);
+            decreaseHp(-15);
         }
     }
 }
