@@ -1824,7 +1824,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 301114250}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.1939638
+  m_Size: 0.19447114
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9089,9 +9089,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e3c93bca645fd4bb3045f2dd12d90f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RightArm: {fileID: 0}
+  LeftArm: {fileID: 0}
+  RightArm1: {fileID: 0}
+  LeftArm1: {fileID: 0}
   catchobjcollider: {fileID: 0}
   RotateSpeed: 2
-  a: {fileID: 0}
 --- !u!138 &1239023719
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -13962,9 +13965,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e3c93bca645fd4bb3045f2dd12d90f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RightArm: {fileID: 0}
+  LeftArm: {fileID: 0}
+  RightArm1: {fileID: 0}
+  LeftArm1: {fileID: 0}
   catchobjcollider: {fileID: 0}
   RotateSpeed: 2
-  a: {fileID: 0}
 --- !u!138 &1943093654
 FixedJoint:
   m_ObjectHideFlags: 0
