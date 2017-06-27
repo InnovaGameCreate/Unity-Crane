@@ -1105,6 +1105,7 @@ GameObject:
   - component: {fileID: 208608606}
   - component: {fileID: 208608605}
   - component: {fileID: 208608604}
+  - component: {fileID: 208608607}
   m_Layer: 5
   m_Name: Viewport
   m_TagString: Untagged
@@ -1176,6 +1177,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &208608607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208608602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503bbe8c73c71c041acec67ce66220df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &225893233
 Prefab:
   m_ObjectHideFlags: 0

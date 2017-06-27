@@ -28,3 +28,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+.vs/Unity-Crane/v15/Browse.VC.db
