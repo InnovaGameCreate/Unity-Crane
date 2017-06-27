@@ -6,6 +6,11 @@ TagManager:
   tags:
   - MovableObj
   - Stage
+  - ScoreObj
+  - Lighter
+  - Crane
+  - Fuel
+  - Heavier
   layers:
   - Default
   - TransparentFX
@@ -18,8 +23,8 @@ TagManager:
   - CraneBody
   - crane
   - Himo
-  - 
-  - 
+  - Beam
+  - matiback
   - 
   - 
   - 
@@ -48,4 +53,10 @@ TagManager:
     locked: 0
   - name: CraneBody
     uniqueID: 584180057
+    locked: 0
+  - name: matiback
+    uniqueID: 247643235
+    locked: 0
+  - name: Beam
+    uniqueID: 3316335771
     locked: 0
