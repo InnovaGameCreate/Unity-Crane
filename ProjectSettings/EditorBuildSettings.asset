@@ -7,16 +7,16 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scene/Start.unity
-    guid: 770bd6d493cced24abdaf6c1ae06176b
-  - enabled: 1
-    path: Assets/Scene/stage2.unity
-    guid: 075227bd3d548824a9137aa31b5243a7
+    guid: 139d8627741192946aec05167b01794c
   - enabled: 0
     path: Assets/Scene/unity-stage(forest) 1.unity
     guid: 36bf690993cceb04187bd89e8f5c8e10
   - enabled: 1
+    path: Assets/Scene/stage2.unity
+    guid: e021c189359c9cf4dbc735d970d8d294
+  - enabled: 1
     path: Assets/Scene/StageTown.unity
-    guid: 52287e25808bff14fa968498cd5dea87
+    guid: 0306ecb55484c614a9e30c1c7bfdb9af
   - enabled: 1
     path: Assets/Scene/Result.unity
     guid: afa13fca76af5864cabdb0bcd738f147
