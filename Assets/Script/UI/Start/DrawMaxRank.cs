@@ -41,11 +41,13 @@ public class DrawMaxRank : MonoBehaviour
                 max_rank_image = Instantiate(c_rank_image, transform.position, Quaternion.identity);
                 break;
         }
-
-        //画像は自分の子要素とする
-        max_rank_image.transform.parent = transform;
-        //位置調節
-        max_rank_image.GetComponent<RectTransform>().Translate(70, -70, 0);
+        if (max_rank_image != null)
+        {
+            //画像は自分の子要素とする
+            max_rank_image.transform.parent = transform;
+            //位置調節
+            max_rank_image.GetComponent<RectTransform>().Translate(70, -70, 0);
+        }
     }
 
     // Update is called once per frame
