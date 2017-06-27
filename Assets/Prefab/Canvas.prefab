@@ -1926,7 +1926,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 7f6abee83f930284f8c68d9fdb2f56fc, type: 3}
+  m_Texture: {fileID: 2800000, guid: 4cfaf9fe189128d4883f0fe694d2cc5c, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2114,7 +2114,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: c784a34807ccd4e409f64cad6f8b009d, type: 3}
+  m_Texture: {fileID: 2800000, guid: e59778b97edc0564caad76c8c9f12aa5, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3512,7 +3512,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224321365890244612}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -3552,7 +3552,7 @@ RectTransform:
   - {fileID: 224451913963986858}
   - {fileID: 224956848877820912}
   m_Father: {fileID: 224321365890244612}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3593,9 +3593,9 @@ RectTransform:
   - {fileID: 224172747315986148}
   - {fileID: 224389773869373674}
   - {fileID: 224347492772238822}
-  - {fileID: 224261554886483100}
   - {fileID: 224628454462412742}
   - {fileID: 224286139590900034}
+  - {fileID: 224261554886483100}
   - {fileID: 224612360680658508}
   - {fileID: 224143114641697438}
   - {fileID: 224256383768248136}
@@ -3901,7 +3901,7 @@ RectTransform:
   - {fileID: 224476541453197180}
   - {fileID: 224877601850203006}
   m_Father: {fileID: 224321365890244612}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

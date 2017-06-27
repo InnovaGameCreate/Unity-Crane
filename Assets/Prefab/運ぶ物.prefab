@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 54966929383354404}
   - component: {fileID: 82326582067234714}
   - component: {fileID: 82455226794630460}
+  - component: {fileID: 114277758000185410}
+  - component: {fileID: 114522098257703418}
   m_Layer: 0
   m_Name: "\u904B\u3076\u7269"
   m_TagString: MovableObj
@@ -42,7 +44,7 @@ GameObject:
   - component: {fileID: 4833859525245432}
   - component: {fileID: 120959104321173508}
   - component: {fileID: 114636795101317412}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +385,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88b6c1b76f8f0b040b9aabdb7a0b6c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basescale: 0
+  boxstatus: 2
+  crane: {fileID: 0}
+  size: 0
+  arm: {fileID: 0}
+  fireobj: {fileID: 0}
   fire: {fileID: 0}
+  se:
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &114277758000185410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1030399276805882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07327d89ccf5175429b0c4c6db6f8fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire: {fileID: 1731187295649882, guid: 701cacb62cef185419ae3143befe091f, type: 2}
+--- !u!114 &114522098257703418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1030399276805882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25dbfb292e96519489197b31b828650b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hako_prefab: {fileID: 1030399276805882}
 --- !u!114 &114636795101317412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -406,7 +441,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88b6c1b76f8f0b040b9aabdb7a0b6c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basescale: 0
+  boxstatus: 2
+  crane: {fileID: 0}
+  size: 0
+  arm: {fileID: 0}
+  fireobj: {fileID: 0}
   fire: {fileID: 1731187295649882, guid: 701cacb62cef185419ae3143befe091f, type: 2}
+  se:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!120 &120959104321173508
 LineRenderer:
   m_ObjectHideFlags: 1
