@@ -66,7 +66,7 @@ public class TargetStatus : MonoBehaviour
             burncount -= Time.deltaTime;
        // decreaseHp();
 
-        Debug.Log(hp);
+//        Debug.Log(hp);
         switch (boxstatus)
         {
             case Status.Heavier:
