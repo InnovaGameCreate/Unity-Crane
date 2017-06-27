@@ -13,7 +13,7 @@ public class Goal : MonoBehaviour {
     private void Start()
     {
         clearui = GameObject.Find("Canvas/クリア").GetComponent<Image>();
-        armrotate = GameObject.Find("Craneまとめ/Himo/CreanCar_Claw").GetComponent<ArmRotate>();
+        armrotate = GameObject.Find("Craneまとめ/Himo/ハサミ機NEW").GetComponent<ArmRotate>();
         timer = GameObject.Find("Canvas/Timer/Text").GetComponent<Timer>();
     }
 

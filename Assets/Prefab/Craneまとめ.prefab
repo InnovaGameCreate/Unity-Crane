@@ -994,7 +994,6 @@ GameObject:
   - component: {fileID: 4920656143741364}
   - component: {fileID: 54359630892153860}
   - component: {fileID: 138475226064972714}
-  - component: {fileID: 114415546765050954}
   - component: {fileID: 65289989349366932}
   - component: {fileID: 82363296228418300}
   - component: {fileID: 82392554245857950}
@@ -1425,7 +1424,6 @@ GameObject:
   - component: {fileID: 82132128379520950}
   - component: {fileID: 65992945071908356}
   - component: {fileID: 138744604111697872}
-  - component: {fileID: 114334424769353128}
   m_Layer: 14
   m_Name: CreanCar_Claw
   m_TagString: Untagged
@@ -7337,20 +7335,6 @@ MonoBehaviour:
   catchobjcollider: {fileID: 0}
   RotateSpeed: 0
   a: {fileID: 0}
---- !u!114 &114334424769353128
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1874288875893860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e3c93bca645fd4bb3045f2dd12d90f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  catchobjcollider: {fileID: 0}
-  RotateSpeed: 2
-  a: {fileID: 0}
 --- !u!114 &114395622577405508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7427,20 +7411,6 @@ MonoBehaviour:
   blurAndFlaresShader: {fileID: 4800000, guid: be6e39cf196f146d5be72fbefb18ed75, type: 3}
   brightPassFilterShader: {fileID: 4800000, guid: 0aeaa4cb29f5d4e9c8455f04c8575c8c,
     type: 3}
---- !u!114 &114415546765050954
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1632699255481446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e3c93bca645fd4bb3045f2dd12d90f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  catchobjcollider: {fileID: 0}
-  RotateSpeed: 2
-  a: {fileID: 0}
 --- !u!114 &114612196604452166
 MonoBehaviour:
   m_ObjectHideFlags: 1
