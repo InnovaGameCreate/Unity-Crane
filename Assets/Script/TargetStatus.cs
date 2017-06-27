@@ -13,6 +13,11 @@ public class TargetStatus : MonoBehaviour
     public GameObject fire;     //炎
     private AudioSource[] se = new AudioSource[2];
     private int hp = 100;       //耐久値
+    //取得用にgetのみpublic
+    public int Hp
+    {
+        get { return hp; }
+    }
     private int nexthp = -1;         //減った後の耐久値
     private const int firedamage = 10;    //炎で減る耐久値の量
     private bool decreasehp;        //hpが減るかどうか
@@ -49,24 +54,24 @@ public class TargetStatus : MonoBehaviour
 
         //if (nexthp < 0)
         //    nexthp = 0;
-      
+
     }
     private void decreaseHp()
     {
-        if (decreasehp&&nexthp < hp)
+        if (decreasehp && nexthp < hp)
             hp--;
         else if (nexthp == hp)
             decreasehp = false;
- 
+
     }
     // Update is called once per frame
     void Update()
     {
         if (burncount > 0)
             burncount -= Time.deltaTime;
-       // decreaseHp();
+        // decreaseHp();
 
-//        Debug.Log(hp);
+        //        Debug.Log(hp);
         switch (boxstatus)
         {
             case Status.Heavier:
@@ -106,7 +111,7 @@ public class TargetStatus : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
- 
+
 
 
         if (other.CompareTag("Heavier"))
@@ -133,14 +138,24 @@ public class TargetStatus : MonoBehaviour
         }
 
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        //ステージと衝突しているとき
+        if (other.CompareTag("Stage"))
+        {
+            damageset(1);
+        }
+    }
+
     //燃える
     public void burn()
     {
-        if (burncount <= 0&&GameObject.Find("運ぶ物/炎(Clone)") == null)
+        if (burncount <= 0 && GameObject.Find("運ぶ物/炎(Clone)") == null)
         {
             fireobj = Instantiate(fire, transform.position, crane.transform.rotation);
             fireobj.transform.parent = transform;
-                burncount = 3;
+            burncount = 3;
             //引数の3倍のダメージ
             damageset(15);
         }

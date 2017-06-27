@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54966929383354404}
   - component: {fileID: 82326582067234714}
   - component: {fileID: 82455226794630460}
+  - component: {fileID: 114642512286206526}
   m_Layer: 0
   m_Name: "\u904B\u3076\u7269"
   m_TagString: MovableObj
@@ -395,6 +396,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f54ea77bbf37b54f8989023c5ed9858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114642512286206526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1030399276805882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3b28489a3d93345b488f9e9b74e849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hako_prefab: {fileID: 1030399276805882}
 --- !u!114 &114990147991500678
 MonoBehaviour:
   m_ObjectHideFlags: 1

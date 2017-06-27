@@ -148,6 +148,12 @@ public class ArmRotate : MonoBehaviour
         return catching;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        //ビーコン消す
+        catchobj.transform.GetComponentInChildren<LineRenderer>().enabled = false;
+    }
+
     void OnTriggerStay(Collider collider)
     {
 
@@ -170,9 +176,6 @@ public class ArmRotate : MonoBehaviour
 
             //クレーンと接触しないよう箱のあたり判定を消す
             catchobj.GetComponent<BoxCollider>().enabled = false;
-
-            //ビーコン消す
-            catchobj.transform.GetComponentInChildren<LineRenderer>().enabled = false;
 
         }
 
