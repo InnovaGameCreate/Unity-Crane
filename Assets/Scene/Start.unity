@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1183,8 +1183,6 @@ GameObject:
   - component: {fileID: 98715516}
   - component: {fileID: 98715515}
   - component: {fileID: 98715514}
-  - component: {fileID: 98715513}
-  - component: {fileID: 98715512}
   m_Layer: 0
   m_Name: Main Camera Main
   m_TagString: MainCamera
@@ -1206,84 +1204,6 @@ Transform:
   m_Father: {fileID: 476162271}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &98715512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114868565120009194, guid: 4ba162dff151d8a45a7358f157996654,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 98715510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fceaeb339b971b429c4cc600acabd13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tweakMode: 0
-  screenBlendMode: 1
-  hdr: 0
-  sepBlurSpread: 2.5
-  quality: 1
-  bloomIntensity: 0.5
-  bloomThreshold: 1.27
-  bloomThresholdColor: {r: 1, g: 1, b: 1, a: 1}
-  bloomBlurIterations: 2
-  hollywoodFlareBlurIterations: 2
-  flareRotation: 0
-  lensflareMode: 1
-  hollyStretchWidth: 2.5
-  lensflareIntensity: 0
-  lensflareThreshold: 0.3
-  lensFlareSaturation: 0.75
-  flareColorA: {r: 0.4, g: 0.4, b: 0.8, a: 0.75}
-  flareColorB: {r: 0.4, g: 0.8, b: 0.8, a: 0.75}
-  flareColorC: {r: 0.8, g: 0.4, b: 0.8, a: 0.75}
-  flareColorD: {r: 0.8, g: 0.4, b: 0, a: 0.75}
-  lensFlareVignetteMask: {fileID: 2800000, guid: 95ef4804fe0be4c999ddaa383536cde8,
-    type: 3}
-  lensFlareShader: {fileID: 4800000, guid: 459fe69d2f6d74ddb92f04dbf45a866b, type: 3}
-  screenBlendShader: {fileID: 4800000, guid: 7856cbff0a0ca45c787d5431eb805bb0, type: 3}
-  blurAndFlaresShader: {fileID: 4800000, guid: be6e39cf196f146d5be72fbefb18ed75, type: 3}
-  brightPassFilterShader: {fileID: 4800000, guid: 0aeaa4cb29f5d4e9c8455f04c8575c8c,
-    type: 3}
---- !u!114 &98715513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114413048427769394, guid: 4ba162dff151d8a45a7358f157996654,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 98715510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fceaeb339b971b429c4cc600acabd13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tweakMode: 0
-  screenBlendMode: 1
-  hdr: 0
-  sepBlurSpread: 2.5
-  quality: 1
-  bloomIntensity: 0.5
-  bloomThreshold: 1.27
-  bloomThresholdColor: {r: 1, g: 1, b: 1, a: 1}
-  bloomBlurIterations: 2
-  hollywoodFlareBlurIterations: 2
-  flareRotation: 0
-  lensflareMode: 1
-  hollyStretchWidth: 2.5
-  lensflareIntensity: 0
-  lensflareThreshold: 0.3
-  lensFlareSaturation: 0.75
-  flareColorA: {r: 0.4, g: 0.4, b: 0.8, a: 0.75}
-  flareColorB: {r: 0.4, g: 0.8, b: 0.8, a: 0.75}
-  flareColorC: {r: 0.8, g: 0.4, b: 0.8, a: 0.75}
-  flareColorD: {r: 0.8, g: 0.4, b: 0, a: 0.75}
-  lensFlareVignetteMask: {fileID: 2800000, guid: 95ef4804fe0be4c999ddaa383536cde8,
-    type: 3}
-  lensFlareShader: {fileID: 4800000, guid: 459fe69d2f6d74ddb92f04dbf45a866b, type: 3}
-  screenBlendShader: {fileID: 4800000, guid: 7856cbff0a0ca45c787d5431eb805bb0, type: 3}
-  blurAndFlaresShader: {fileID: 4800000, guid: be6e39cf196f146d5be72fbefb18ed75, type: 3}
-  brightPassFilterShader: {fileID: 4800000, guid: 0aeaa4cb29f5d4e9c8455f04c8575c8c,
-    type: 3}
 --- !u!114 &98715514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1824,7 +1744,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 301114250}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.19454926
+  m_Size: 0.19447114
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3138,7 +3058,6 @@ GameObject:
   - component: {fileID: 303186591}
   - component: {fileID: 303186594}
   - component: {fileID: 303186593}
-  - component: {fileID: 303186592}
   m_Layer: 0
   m_Name: Crean_arm
   m_TagString: Untagged
@@ -3162,19 +3081,6 @@ Transform:
   m_Father: {fileID: 1516438447}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &303186592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114004664733976414, guid: 4ba162dff151d8a45a7358f157996654,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 303186590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77d279f0aec530842822f97e80b8b900, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 1
 --- !u!23 &303186593
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6304,7 +6210,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 859546294}
-  - component: {fileID: 859546301}
   - component: {fileID: 859546300}
   - component: {fileID: 859546299}
   - component: {fileID: 859546298}
@@ -6541,24 +6446,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &859546301
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 95498796693168802, guid: 4ba162dff151d8a45a7358f157996654,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 859546293}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 3cfc2fbf985a1f445a3cad04fd111182, type: 3}
-  m_Controller: {fileID: 9100000, guid: 103c56cb582ce88408c7733b64ef0ccc, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &859970254
 GameObject:
   m_ObjectHideFlags: 0
@@ -9055,7 +8942,6 @@ GameObject:
   - component: {fileID: 1239023721}
   - component: {fileID: 1239023720}
   - component: {fileID: 1239023719}
-  - component: {fileID: 1239023718}
   m_Layer: 14
   m_Name: CreanCar_Claw
   m_TagString: Untagged
@@ -9077,24 +8963,6 @@ Transform:
   m_Father: {fileID: 269240951}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1239023718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114334424769353128, guid: 4ba162dff151d8a45a7358f157996654,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1239023716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e3c93bca645fd4bb3045f2dd12d90f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RightArm: {fileID: 0}
-  LeftArm: {fileID: 0}
-  RightArm1: {fileID: 0}
-  LeftArm1: {fileID: 0}
-  catchobjcollider: {fileID: 0}
-  RotateSpeed: 2
 --- !u!138 &1239023719
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -11305,7 +11173,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1516438447}
-  - component: {fileID: 1516438448}
   m_Layer: 0
   m_Name: "\u4E0A\u90E8"
   m_TagString: Untagged
@@ -11332,19 +11199,6 @@ Transform:
   m_Father: {fileID: 1848929520}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1516438448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114092702553616448, guid: 4ba162dff151d8a45a7358f157996654,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1516438446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc167f9d6e3f2ed499d24134d2249a15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RotateSpeed: 2
 --- !u!1 &1531082685
 GameObject:
   m_ObjectHideFlags: 0
@@ -13749,7 +13603,6 @@ GameObject:
   - component: {fileID: 1943093649}
   - component: {fileID: 1943093655}
   - component: {fileID: 1943093654}
-  - component: {fileID: 1943093653}
   - component: {fileID: 1943093652}
   - component: {fileID: 1943093651}
   - component: {fileID: 1943093650}
@@ -13953,24 +13806,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: -2, z: 0}
---- !u!114 &1943093653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114415546765050954, guid: 4ba162dff151d8a45a7358f157996654,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1943093648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e3c93bca645fd4bb3045f2dd12d90f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RightArm: {fileID: 0}
-  LeftArm: {fileID: 0}
-  RightArm1: {fileID: 0}
-  LeftArm1: {fileID: 0}
-  catchobjcollider: {fileID: 0}
-  RotateSpeed: 2
 --- !u!138 &1943093654
 FixedJoint:
   m_ObjectHideFlags: 0
