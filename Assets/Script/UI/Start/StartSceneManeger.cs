@@ -76,4 +76,9 @@ public class StartSceneManeger : MonoBehaviour
         selected_stage = Stage.Forest;
         StartCoroutine(CountdownCoroutine("unity-stage(forest)"));
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
