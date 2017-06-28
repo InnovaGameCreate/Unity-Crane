@@ -7,6 +7,7 @@ public class Duststorm : MonoBehaviour {
     private ParticleSystem storm;
     private AudioSource sound1;
     private AudioSource sound2;
+    private TargetStatus boxst;  //箱状態
     //private TargetStatus damage;
 
     void Start () {
@@ -19,6 +20,9 @@ public class Duststorm : MonoBehaviour {
 
         //初期値のランダム設定
         transform.position = new Vector3(Random.Range(30.0f, 420.0f), 2, Random.Range(30.0f, 420.0f));
+
+        boxst = GameObject.Find("運ぶ物").GetComponent<TargetStatus>();
+
     }
 
     private void Update()
@@ -49,6 +53,7 @@ public class Duststorm : MonoBehaviour {
         if (other.gameObject.CompareTag("MovableObj"))
         {
             //damage.
+            boxst.dust();
         }
     }
 }

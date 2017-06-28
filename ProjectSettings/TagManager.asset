@@ -25,8 +25,8 @@ TagManager:
   - Himo
   - Beam
   - matiback
-  - 
-  - 
+  - stage
+  - craneguard
   - 
   - 
   - 
@@ -54,9 +54,9 @@ TagManager:
   - name: CraneBody
     uniqueID: 584180057
     locked: 0
-  - name: matiback
-    uniqueID: 247643235
-    locked: 0
   - name: Beam
     uniqueID: 3316335771
+    locked: 0
+  - name: matiback
+    uniqueID: 247643235
     locked: 0

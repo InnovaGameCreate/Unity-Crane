@@ -22,7 +22,7 @@ public class SimpleCarController : MonoBehaviour
     private int boostcount;             //ブーストカウント
     private FuelGaugeNow fuel;            //燃料インスタンス
     
-    float Breaking = 10000;
+    float Breaking = 100000;
 
     private Rigidbody rb;
 

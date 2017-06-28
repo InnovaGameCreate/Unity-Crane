@@ -151,8 +151,12 @@ public class TargetStatus : MonoBehaviour
             fireobj = Instantiate(fire, transform.position, crane.transform.rotation);
             fireobj.transform.parent = transform;
             burncount = 3;
-            //引数の3倍のダメージ
+
             decreaseHp(-15);
         }
+    }
+    public void dust()
+    {
+        decreaseHp(-1);
     }
 }
