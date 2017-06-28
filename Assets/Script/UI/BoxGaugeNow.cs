@@ -8,13 +8,8 @@ public class BoxGaugeNow : MonoBehaviour
 
     private RectTransform rect_;
     private float max_width_;
-    public static float now_box_;
+    public static float now_box_ { get; set; }
     float pre_box_;
-    public float Now_box_
-    {
-        get { return now_box_; }
-        private set { now_box_ = value; }
-    }
 
     public float max_box_ = 100.0f;
 
