@@ -23,6 +23,7 @@ public class RespawnObejct : MonoBehaviour
         //respawn時設定用
         BoxGaugeNow.now_box_ = 100;//ゲージを再登録
         GetComponentInChildren<LineRenderer>().enabled = true;//ビーコン表示
+        GetComponent<BoxCollider>().enabled = true;
     }
 
     // Update is called once per frame
