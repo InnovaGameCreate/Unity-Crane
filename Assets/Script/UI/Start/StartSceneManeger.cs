@@ -74,6 +74,6 @@ public class StartSceneManeger : MonoBehaviour
     public void LoadSceneForest()
     {
         selected_stage = Stage.Forest;
-        StartCoroutine(CountdownCoroutine("unity-stage(forest) 1"));
+        StartCoroutine(CountdownCoroutine("unity-stage(forest)"));
     }
 }
