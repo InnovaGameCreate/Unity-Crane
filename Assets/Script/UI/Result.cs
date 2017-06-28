@@ -67,18 +67,20 @@ public class Result : MonoBehaviour
         }
     }
 
+    //スタート画面に移行登録
+    public void ToStartScene()
+    {
+        GetComponent<AudioSource>().Play();
+        scenechange = true;
+    }
+
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            GetComponent<AudioSource>().Play();
-            scenechange = true;
-        }
         if (scenechange && !GetComponent<AudioSource>().isPlaying)
         {
             PlayerPrefs.SetInt("" + StartSceneManeger.selected_stage, rank_for_save);//ランクをセーブ
-            SceneManager.LoadScene("Start");
+            SceneManager.LoadScene("Start");//スタート画面に移行
         }
     }
 }
