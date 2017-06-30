@@ -13,16 +13,8 @@ public class Effect : MonoBehaviour {
         if (hit.CompareTag("Crane"))
         {
             Debug.Log("a");
-            if (RearRight.motorTorque == -9000)
-            {
                 RearRight.brakeTorque = RearLeft.brakeTorque = mud_speed;
-                Debug.Log("b");
-            }
-            else if (RearRight.motorTorque == 9000)
-            {
-                RearRight.brakeTorque = RearLeft.brakeTorque = mud_speed;
-                Debug.Log("c");
-            }
+            
         }
     }
 
