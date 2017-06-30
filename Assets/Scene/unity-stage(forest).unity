@@ -2363,7 +2363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d23781130c054b4690a4bdb949a6118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mud_speed: 20000
+  mud_speed: 8000
   RearRight: {fileID: 73607371}
   RearLeft: {fileID: 1033718232}
 --- !u!65 &76828165
@@ -15629,7 +15629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d23781130c054b4690a4bdb949a6118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mud_speed: 20000
+  mud_speed: 8000
   RearRight: {fileID: 73607371}
   RearLeft: {fileID: 1033718232}
 --- !u!65 &569858155
@@ -28917,7 +28917,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1119037794}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 45.87, y: 59.2, z: 83.78}
+  m_LocalPosition: {x: 45.87, y: 59.2, z: 80.17}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1712652985}
@@ -34892,7 +34892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d23781130c054b4690a4bdb949a6118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mud_speed: 20000
+  mud_speed: 8000
   RearRight: {fileID: 73607371}
   RearLeft: {fileID: 1033718232}
 --- !u!65 &1365595965
@@ -43860,7 +43860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d23781130c054b4690a4bdb949a6118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mud_speed: 20000
+  mud_speed: 8000
   RearRight: {fileID: 73607371}
   RearLeft: {fileID: 1033718232}
 --- !u!65 &1658646710
@@ -47497,7 +47497,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1795818580}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 45.63, y: 57.26, z: 81.62}
+  m_LocalPosition: {x: 45.63, y: 57.26, z: 76.81}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 1792226644}
@@ -48832,7 +48832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d23781130c054b4690a4bdb949a6118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mud_speed: 20000
+  mud_speed: 8000
   RearRight: {fileID: 73607371}
   RearLeft: {fileID: 1033718232}
 --- !u!65 &1837878003
@@ -50117,7 +50117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d23781130c054b4690a4bdb949a6118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mud_speed: 20000
+  mud_speed: 8000
   RearRight: {fileID: 73607371}
   RearLeft: {fileID: 1033718232}
 --- !u!65 &1864420519
