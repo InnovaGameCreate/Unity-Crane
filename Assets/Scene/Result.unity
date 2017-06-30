@@ -1543,9 +1543,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68123cd8a5562d244a2255cdf09d5424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rankS_border: 50
-  rankA_border: 30
-  rankB_border: 20
+  rankS_border: 2500
+  rankA_border: 2300
+  rankB_border: 2000
 --- !u!4 &1686801705
 Transform:
   m_ObjectHideFlags: 0
