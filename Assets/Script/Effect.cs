@@ -2,8 +2,7 @@
 using UnityEngine;
 
 public class Effect : MonoBehaviour {
-    public float mud_speed = 20000;
-    public float save_speed = 3000;
+    public float mud_speed = 50000;
     public WheelCollider RearRight;//後輪
     public WheelCollider RearLeft;
 
@@ -14,13 +13,15 @@ public class Effect : MonoBehaviour {
         if (hit.CompareTag("Crane"))
         {
             Debug.Log("a");
-            if (RearRight.motorTorque > save_speed)
+            if (RearRight.motorTorque == -9000)
             {
-                RearRight.motorTorque = RearLeft.motorTorque = -mud_speed;
+                RearRight.brakeTorque = RearLeft.brakeTorque = mud_speed;
+                Debug.Log("b");
             }
-            else if (RearRight.motorTorque < -save_speed)
+            else if (RearRight.motorTorque == 9000)
             {
-                RearRight.motorTorque = RearLeft.motorTorque = mud_speed;
+                RearRight.brakeTorque = RearLeft.brakeTorque = mud_speed;
+                Debug.Log("c");
             }
         }
     }
