@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -15,13 +13,14 @@ public class Result : MonoBehaviour
 
     //ランク決定基準
     public int rankS_border;
+
     public int rankA_border;
     public int rankB_border;
 
     private bool scenechange;
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {
         time = GameObject.Find("StartCanvas/残り時間：").GetComponent<Text>();
         score = GameObject.Find("StartCanvas/スコア：").GetComponent<Text>();
@@ -68,22 +67,20 @@ public class Result : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    //スタート画面に移行登録
+    public void ToStartScene()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            GetComponent<AudioSource>().Play();
-            scenechange = true;
+        GetComponent<AudioSource>().Play();
+        scenechange = true;
+    }
 
-        }
+    // Update is called once per frame
+    private void Update()
+    {
         if (scenechange && !GetComponent<AudioSource>().isPlaying)
         {
             PlayerPrefs.SetInt("" + StartSceneManeger.selected_stage, rank_for_save);//ランクをセーブ
-            SceneManager.LoadScene("Start");
+            SceneManager.LoadScene("Start");//スタート画面に移行
         }
-
-
-
     }
 }

@@ -33,7 +33,7 @@ public class TargetStatus : MonoBehaviour
     void Start()
     {
         crane = GameObject.Find("Craneまとめ/CraneCar");
-        arm = GameObject.Find("Craneまとめ/Himo/CreanCar_Claw").GetComponent<ArmRotate>();
+        arm = GameObject.Find("Craneまとめ/Himo/ハサミ機NEW").GetComponent<ArmRotate>();
 
         //se関連
         AudioSource[] audioSources = GetComponents<AudioSource>();
@@ -43,30 +43,24 @@ public class TargetStatus : MonoBehaviour
     }
 
     //箱の耐久値を減らす
-    public void damageset(int damage)
+    public void damageset()
     {
-        box.ChangeNowBox(-damage);
-        //if (!decreasehp) {
-        //    nexthp = hp - damage;
-        //    decreasehp = true;
-        //} else
-        //    nexthp = nexthp - damage;
-
-        //if (nexthp < 0)
-        //    nexthp = 0;
-
+        box.ChangeNowBox(hp);
     }
-    private void decreaseHp()
+
+    private void decreaseHp(int diff)
     {
-        if (decreasehp && nexthp < hp)
-            hp--;
-        else if (nexthp == hp)
-            decreasehp = false;
+        hp += diff;
+        if (hp < 0)
+            hp = 0;
+        else if (hp > 100)
+            hp = 100;
 
     }
     // Update is called once per frame
     void Update()
     {
+        damageset();
         if (burncount > 0)
             burncount -= Time.deltaTime;
         // decreaseHp();
@@ -139,14 +133,15 @@ public class TargetStatus : MonoBehaviour
 
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        //ステージと衝突しているとき
-        if (other.CompareTag("Stage"))
-        {
-            damageset(1);
-        }
-    }
+    //床とステージの区別がめんどいのでコメントアウト
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    //ステージと衝突しているとき
+    //    if (other.CompareTag("Stage"))
+    //    {
+    //        decreaseHp(-10);
+    //    }
+    //}
 
     //燃える
     public void burn()
@@ -156,8 +151,12 @@ public class TargetStatus : MonoBehaviour
             fireobj = Instantiate(fire, transform.position, crane.transform.rotation);
             fireobj.transform.parent = transform;
             burncount = 3;
-            //引数の3倍のダメージ
-            damageset(15);
+
+            decreaseHp(-15);
         }
+    }
+    public void dust()
+    {
+        decreaseHp(-1);
     }
 }

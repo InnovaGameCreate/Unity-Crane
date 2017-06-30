@@ -8,13 +8,14 @@ public class ScoreTotal : MonoBehaviour
 
     private Text text_;
     private float anim_score_;
-    public static float score_ { get; set; }
+    public static float score_;
 
     // Use this for initialization
     void Start()
     {
         text_ = GetComponent<Text>();
         text_.text = "";
+        score_ = 0;
     }
 
     // Update is called once per frame

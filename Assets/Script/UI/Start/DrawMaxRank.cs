@@ -46,7 +46,7 @@ public class DrawMaxRank : MonoBehaviour
             //画像は自分の子要素とする
             max_rank_image.transform.parent = transform;
             //位置調節
-            max_rank_image.GetComponent<RectTransform>().Translate(70, -70, 0);
+            max_rank_image.GetComponent<RectTransform>().Translate(100, -100, 0);
         }
     }
 

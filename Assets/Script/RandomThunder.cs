@@ -5,7 +5,6 @@ using UnityEngine;
 public class RandomThunder : MonoBehaviour
 {
     public GameObject thunder;  //カミナリオブジェクト
-    public GameObject marker;   //カミナリ発生予告マーカー
     private GameObject light;   //ライトオブジェクト
     private GameObject crane;   //クレーンオブジェクト
     private const float lighttime = 5;      //雷落ちるまでの時間
@@ -13,7 +12,7 @@ public class RandomThunder : MonoBehaviour
     private float thunderwiderange = 5;        //カミナリ発生横範囲
     private float thunderforwardrange = 10;        //カミナリ発生奥行範囲
     private float lum = 1.0f;   //明るさ
-    private bool startthunder =true;     //かみなり発生開始かどうか
+    private bool startthunder =false;     //かみなり発生開始かどうか
 
     // Use this for initialization
     void Start()
@@ -26,6 +25,8 @@ public class RandomThunder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         if (startthunder)
         {
             count += Time.deltaTime;
@@ -41,6 +42,9 @@ public class RandomThunder : MonoBehaviour
                 light.GetComponent<Light>().intensity = 1;
             }
         }
+        else
+           if( Random.Range(0 , 5)>3)
+            startthunder=true;
 
     }
 
@@ -54,8 +58,7 @@ public class RandomThunder : MonoBehaviour
         Vector3 pos = crane.GetComponent<Transform>().position + crane.GetComponent<Transform>().forward * 50;
         Vector2 randrange = new Vector2(Random.RandomRange(-thunderwiderange, thunderwiderange), Random.RandomRange(-thunderforwardrange, thunderforwardrange));
         Vector3 edit = new Vector3(pos.x+ randrange.x+2, pos.y+10, pos.z+ randrange.y);
-        Instantiate(marker, edit, Quaternion.Euler(new Vector3(90, -90, 0)));
-
+      
         edit = new Vector3(pos.x + randrange.x, pos.y + 28, pos.z + randrange.y);
         Instantiate(thunder,edit , Quaternion.Euler(new Vector3(90,0,0)));
     }
