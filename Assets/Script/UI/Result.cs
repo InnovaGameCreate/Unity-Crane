@@ -41,7 +41,7 @@ public class Result : MonoBehaviour
         score.text = "スコア：" + scorep.ToString() + " point";
         int hpp = (int)BoxGaugeNow.now_box_;
         hp.text = "荷物耐久値：" + (hpp * 10).ToString() + " point";
-        int totalp = timep + scorep;
+        int totalp = timep + scorep + hpp;
         total.text = "TOTAL：" + totalp.ToString() + " point";
 
         //ランク決め
