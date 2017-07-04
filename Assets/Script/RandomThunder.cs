@@ -33,13 +33,13 @@ public class RandomThunder : MonoBehaviour
 
             if (count > lighttime)
             {
-                light.GetComponent<Light>().intensity = 0;
+                light.GetComponent<Light>().intensity = 1;
                 count = 0;
                 appearThunder();
             }
             else if (count > 1)
             {
-                light.GetComponent<Light>().intensity = 1;
+                light.GetComponent<Light>().intensity = 0;
             }
         }
         else

@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4339885935987410}
   - component: {fileID: 137923551735871794}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: claw.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &1056450157959750
 GameObject:
@@ -110,7 +110,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4491682606141248}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Claw_Top_R.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4384226510252818}
-  m_Layer: 14
+  - component: {fileID: 65891499937073414}
+  m_Layer: 10
   m_Name: Himo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +181,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4515820103774308}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Claw_Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +253,7 @@ GameObject:
   - component: {fileID: 23896216926448000}
   - component: {fileID: 54625888600870578}
   - component: {fileID: 138890500602976082}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: CreanCar_chain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +308,8 @@ GameObject:
   - component: {fileID: 81704112794285846}
   - component: {fileID: 114180666385278838}
   - component: {fileID: 114413048427769394}
-  - component: {fileID: 114868565120009194}
+  - component: {fileID: 114944757792978060}
+  - component: {fileID: 114272331437415132}
   m_Layer: 0
   m_Name: Main Camera Main
   m_TagString: MainCamera
@@ -340,7 +342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4758513907161042}
   - component: {fileID: 54108951602858336}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Claw_Top_R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +377,7 @@ GameObject:
   - component: {fileID: 23509788458640082}
   - component: {fileID: 54489939173188890}
   - component: {fileID: 59245874245812374}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: CreanCar_chain (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +397,7 @@ GameObject:
   - component: {fileID: 23556777976290654}
   - component: {fileID: 54058341878482408}
   - component: {fileID: 59416888121665378}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: HimoParts (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +415,7 @@ GameObject:
   - component: {fileID: 33948879076665990}
   - component: {fileID: 65336241984026604}
   - component: {fileID: 23342603855541524}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4759093823321658}
   - component: {fileID: 137550468074028912}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: claw.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,7 +478,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4337304969102016}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Claw_Top_R.002_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4548491709540870}
   - component: {fileID: 137424985517681066}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: claw.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,6 +546,22 @@ GameObject:
   - component: {fileID: 23939992600946128}
   m_Layer: 0
   m_Name: Wheel.002_MeshPart2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1342076001936576
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4731832858111484}
+  - component: {fileID: 108841512078806038}
+  m_Layer: 0
+  m_Name: "\u30D8\u30C3\u30C9\u30E9\u30A4\u30C8\u5DE6"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -610,7 +628,7 @@ GameObject:
   - component: {fileID: 23206257536511544}
   - component: {fileID: 54739601079520028}
   - component: {fileID: 59005629842050050}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: CreanCar_chain (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -660,7 +678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4451979332297834}
   - component: {fileID: 137236698985615456}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: claw.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -697,13 +715,29 @@ GameObject:
   - component: {fileID: 23990936366676164}
   - component: {fileID: 54475481792684710}
   - component: {fileID: 59970675890336588}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: HimoParts (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1426960205603186
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4882734498332328}
+  - component: {fileID: 108426191361338720}
+  m_Layer: 0
+  m_Name: "\u30D8\u30C3\u30C9\u30E9\u30A4\u30C8\u53F3"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1434648292342552
 GameObject:
   m_ObjectHideFlags: 1
@@ -719,7 +753,7 @@ GameObject:
   - component: {fileID: 82990912796593124}
   - component: {fileID: 82659706025934992}
   - component: {fileID: 114255756574028380}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: "\u30CF\u30B5\u30DF\u6A5FNEW"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +773,7 @@ GameObject:
   - component: {fileID: 23957746605934212}
   - component: {fileID: 54037476174637402}
   - component: {fileID: 138616581290476066}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: HimoParts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +793,7 @@ GameObject:
   - component: {fileID: 23396237195314416}
   - component: {fileID: 54294508662051344}
   - component: {fileID: 59937140577622100}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: HimoParts (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -779,7 +813,7 @@ GameObject:
   - component: {fileID: 23887325109330654}
   - component: {fileID: 54640343584586024}
   - component: {fileID: 59374135250371424}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: HimoParts (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -812,7 +846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4378477656597264}
   - component: {fileID: 136512767258914400}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Claw_Top_R.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,7 +861,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4781021265672324}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Claw_Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -864,7 +898,7 @@ GameObject:
   - component: {fileID: 23555268805178336}
   - component: {fileID: 54617677657802986}
   - component: {fileID: 59043635856347966}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: HimoParts (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -977,7 +1011,7 @@ GameObject:
   - component: {fileID: 23411115137116876}
   - component: {fileID: 54325020107763328}
   - component: {fileID: 59392071129021132}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: HimoParts (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -997,7 +1031,7 @@ GameObject:
   - component: {fileID: 65289989349366932}
   - component: {fileID: 82363296228418300}
   - component: {fileID: 82392554245857950}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1086,7 +1120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4759729861971734}
   - component: {fileID: 137711200842702592}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: claw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1144,7 +1178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4316662236577340}
   - component: {fileID: 136603552317980114}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Claw_Top_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1164,7 +1198,7 @@ GameObject:
   - component: {fileID: 23703201799631258}
   - component: {fileID: 54772620971044444}
   - component: {fileID: 59824119780772476}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: HimoParts (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1180,7 +1214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4934305251458988}
   - component: {fileID: 136055605050850354}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Claw_Top_R.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1198,7 +1232,7 @@ GameObject:
   - component: {fileID: 33002901975788430}
   - component: {fileID: 65898852520986646}
   - component: {fileID: 23061486708414252}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1301,7 +1335,7 @@ GameObject:
   - component: {fileID: 33762333069235372}
   - component: {fileID: 65019946328109406}
   - component: {fileID: 23110343369906496}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1319,8 +1353,24 @@ GameObject:
   - component: {fileID: 33764836539228400}
   - component: {fileID: 135461167872642084}
   - component: {fileID: 23878508926221124}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1844712354721590
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4334102182195436}
+  - component: {fileID: 215587520279354388}
+  m_Layer: 0
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1383,7 +1433,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4228599446503880}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Claw_Top_R.003_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1424,7 +1474,7 @@ GameObject:
   - component: {fileID: 82132128379520950}
   - component: {fileID: 65992945071908356}
   - component: {fileID: 138744604111697872}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: CreanCar_Claw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1456,7 +1506,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4395357583834010}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Rotationparts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1493,7 +1543,7 @@ GameObject:
   - component: {fileID: 23017962602911026}
   - component: {fileID: 54196142256531448}
   - component: {fileID: 59644500991430324}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: HimoParts (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1524,7 +1574,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4121417734869186}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Claw_Top_R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1539,7 +1589,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4877268188675316}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: CatchPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,7 +1608,7 @@ GameObject:
   - component: {fileID: 23187614053357506}
   - component: {fileID: 54245169848366462}
   - component: {fileID: 59040136122586110}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: CreanCar_chain (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1576,7 +1626,7 @@ GameObject:
   - component: {fileID: 33066523892993528}
   - component: {fileID: 65967851318687748}
   - component: {fileID: 23919140188399564}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1612,7 +1662,7 @@ GameObject:
   - component: {fileID: 23966324106974622}
   - component: {fileID: 54897882251060442}
   - component: {fileID: 59574543077184556}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: CreanCar_chain (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1946,6 +1996,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4384226510252818}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4334102182195436
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844712354721590}
+  m_LocalRotation: {x: 0.0028363513, y: -0.9961907, z: 0.00024814895, w: 0.08715553}
+  m_LocalPosition: {x: 0.29, y: 3.35, z: 2.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4946749103351636}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4337304969102016
 Transform:
@@ -2546,6 +2609,19 @@ Transform:
   m_Father: {fileID: 4384226510252818}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4731832858111484
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342076001936576}
+  m_LocalRotation: {x: 0.0001298564, y: -0.045608506, z: 0.002844221, w: 0.99895537}
+  m_LocalPosition: {x: -2.839989, y: 0.09000023, z: 4.6500115}
+  m_LocalScale: {x: 1.000002, y: 1, z: 1.000002}
+  m_Children: []
+  m_Father: {fileID: 4946749103351636}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0.030000001, y: -5.228, z: 0.32500002}
 --- !u!4 &4758513907161042
 Transform:
   m_ObjectHideFlags: 1
@@ -2771,6 +2847,19 @@ Transform:
   m_Father: {fileID: 4584700369715928}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4882734498332328
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1426960205603186}
+  m_LocalRotation: {x: 0.0001297451, y: 0.045606907, z: 0.0028418845, w: 0.9989554}
+  m_LocalPosition: {x: 2.45, y: 0.12, z: 4.28}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4946749103351636}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 5.228, z: 0.326}
 --- !u!4 &4912733111540830
 Transform:
   m_ObjectHideFlags: 1
@@ -2850,6 +2939,9 @@ Transform:
   - {fileID: 4660479053946688}
   - {fileID: 4258477912503724}
   - {fileID: 4400677565378942}
+  - {fileID: 4882734498332328}
+  - {fileID: 4731832858111484}
+  - {fileID: 4334102182195436}
   m_Father: {fileID: 4803345094959884}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.326}
@@ -6081,6 +6173,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 1, z: 10}
   m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!65 &65891499937073414
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1067659694713430}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65898852520986646
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -7164,6 +7268,78 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!108 &108426191361338720
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1426960205603186}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 107.10607
+  m_SpotAngle: 31
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!108 &108841512078806038
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342076001936576}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 107.10607
+  m_SpotAngle: 31
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!114 &114004060424911430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7335,6 +7511,32 @@ MonoBehaviour:
   catchobjcollider: {fileID: 0}
   RotateSpeed: 0
   a: {fileID: 0}
+--- !u!114 &114272331437415132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1203927747270686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646b5bc27a658f447b1d929fd5ffbd70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 1
+  showGeneratedNormals: 0
+  offsetScale: 0.2
+  blurRadius: 18
+  edgeThresholdMin: 0.05
+  edgeThreshold: 0.2
+  edgeSharpness: 4
+  dlaaSharp: 0
+  ssaaShader: {fileID: 4800000, guid: b3728d1488b02490cbd196c7941bf1f8, type: 3}
+  dlaaShader: {fileID: 4800000, guid: 017ca72b9e8a749058d13ebd527e98fa, type: 3}
+  nfaaShader: {fileID: 4800000, guid: ce0cb2621f6d84e21a87414e471a3cce, type: 3}
+  shaderFXAAPreset2: {fileID: 4800000, guid: 6f1418cffd12146f2a83be795f6fa5a7, type: 3}
+  shaderFXAAPreset3: {fileID: 4800000, guid: c182fa94a5a0a4c02870641efcd38cd5, type: 3}
+  shaderFXAAII: {fileID: 4800000, guid: cd5b323dcc592457790ff18b528f5e67, type: 3}
+  shaderFXAAIII: {fileID: 4800000, guid: c547503fff0e8482ea5793727057041c, type: 3}
 --- !u!114 &114395622577405508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7389,8 +7591,8 @@ MonoBehaviour:
   hdr: 0
   sepBlurSpread: 2.5
   quality: 1
-  bloomIntensity: 0.5
-  bloomThreshold: 1.27
+  bloomIntensity: 0.4
+  bloomThreshold: 0.25
   bloomThresholdColor: {r: 1, g: 1, b: 1, a: 1}
   bloomBlurIterations: 2
   hollywoodFlareBlurIterations: 2
@@ -7623,44 +7825,6 @@ MonoBehaviour:
   blurAndFlaresShader: {fileID: 4800000, guid: be6e39cf196f146d5be72fbefb18ed75, type: 3}
   brightPassFilterShader: {fileID: 4800000, guid: 0aeaa4cb29f5d4e9c8455f04c8575c8c,
     type: 3}
---- !u!114 &114868565120009194
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1203927747270686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fceaeb339b971b429c4cc600acabd13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tweakMode: 0
-  screenBlendMode: 1
-  hdr: 0
-  sepBlurSpread: 2.5
-  quality: 1
-  bloomIntensity: 0.5
-  bloomThreshold: 1.27
-  bloomThresholdColor: {r: 1, g: 1, b: 1, a: 1}
-  bloomBlurIterations: 2
-  hollywoodFlareBlurIterations: 2
-  flareRotation: 0
-  lensflareMode: 1
-  hollyStretchWidth: 2.5
-  lensflareIntensity: 0
-  lensflareThreshold: 0.3
-  lensFlareSaturation: 0.75
-  flareColorA: {r: 0.4, g: 0.4, b: 0.8, a: 0.75}
-  flareColorB: {r: 0.4, g: 0.8, b: 0.8, a: 0.75}
-  flareColorC: {r: 0.8, g: 0.4, b: 0.8, a: 0.75}
-  flareColorD: {r: 0.8, g: 0.4, b: 0, a: 0.75}
-  lensFlareVignetteMask: {fileID: 2800000, guid: 95ef4804fe0be4c999ddaa383536cde8,
-    type: 3}
-  lensFlareShader: {fileID: 4800000, guid: 459fe69d2f6d74ddb92f04dbf45a866b, type: 3}
-  screenBlendShader: {fileID: 4800000, guid: 7856cbff0a0ca45c787d5431eb805bb0, type: 3}
-  blurAndFlaresShader: {fileID: 4800000, guid: be6e39cf196f146d5be72fbefb18ed75, type: 3}
-  brightPassFilterShader: {fileID: 4800000, guid: 0aeaa4cb29f5d4e9c8455f04c8575c8c,
-    type: 3}
 --- !u!114 &114876461922859482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7672,6 +7836,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d8a494ba7d1bb84fa8f8de9c2f1a5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114944757792978060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1203927747270686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0923359e9e352a4b9b11c7b7161ad67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Radius: 0.4
+  m_SampleCount: 1
+  m_OcclusionIntensity: 1.5
+  m_Blur: 2
+  m_Downsampling: 2
+  m_OcclusionAttenuation: 1
+  m_MinZ: 0.01
+  m_SSAOShader: {fileID: 4800000, guid: 43ca18288c424f645aaa1e9e07f04c50, type: 3}
+  m_RandomTexture: {fileID: 2800000, guid: a181ca8e3c62f3e4b8f183f6c586b032, type: 3}
 --- !u!124 &124202563922808996
 Behaviour:
   m_ObjectHideFlags: 1
@@ -8446,3 +8630,35 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!215 &215587520279354388
+ReflectionProbe:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844712354721590}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 512
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 10, y: 10, z: 16.51}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 1
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}

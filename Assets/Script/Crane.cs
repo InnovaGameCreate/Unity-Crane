@@ -27,7 +27,5 @@ public class Crane : MonoBehaviour {
                 transform.Rotate(new Vector3(1, 0, 0), MoveSpeed);
      
         }
-        Debug.Log(rot.x);
-
     }
 }
