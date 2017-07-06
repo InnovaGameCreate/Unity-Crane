@@ -207,13 +207,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 32715234}
-  m_LocalRotation: {x: 0.0001297451, y: 0.045606907, z: 0.0028418845, w: 0.9989554}
+  m_LocalRotation: {x: 0, y: 0, z: 0.0028448447, w: 0.99999595}
   m_LocalPosition: {x: 2.45, y: 0.12, z: 4.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 970715361}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 5.228, z: 0.326}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.326}
 --- !u!108 &32715236
 Light:
   m_ObjectHideFlags: 0
@@ -225,7 +225,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Intensity: 2
   m_Range: 107.10607
   m_SpotAngle: 31
   m_CookieSize: 10
@@ -887,8 +887,8 @@ MonoBehaviour:
   hdr: 0
   sepBlurSpread: 2.5
   quality: 1
-  bloomIntensity: 0.4
-  bloomThreshold: 0.25
+  bloomIntensity: 1
+  bloomThreshold: 0.05
   bloomThresholdColor: {r: 1, g: 1, b: 1, a: 1}
   bloomBlurIterations: 2
   hollywoodFlareBlurIterations: 2
@@ -1872,13 +1872,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 253335223}
-  m_LocalRotation: {x: 0.0001298564, y: -0.045608506, z: 0.002844221, w: 0.99895537}
+  m_LocalRotation: {x: 0.00026177935, y: -0.00000074244525, z: 0.0028361378, w: 0.999996}
   m_LocalPosition: {x: -2.839989, y: 0.09000023, z: 4.6500115}
   m_LocalScale: {x: 1.000002, y: 1, z: 1.000002}
   m_Children: []
   m_Father: {fileID: 970715361}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0.030000001, y: -5.228, z: 0.32500002}
+  m_LocalEulerAnglesHint: {x: 0.030000001, y: 0, z: 0.32500002}
 --- !u!108 &253335225
 Light:
   m_ObjectHideFlags: 0
@@ -1890,7 +1890,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Intensity: 2
   m_Range: 107.10607
   m_SpotAngle: 31
   m_CookieSize: 10
@@ -7444,12 +7444,12 @@ Prefab:
     - target: {fileID: 224601093900867194, guid: 9c35afe52f825fe4d9508bb9ded25bc9,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 541.9355
+      value: 560
       objectReference: {fileID: 0}
     - target: {fileID: 224601093900867194, guid: 9c35afe52f825fe4d9508bb9ded25bc9,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 85.16129
+      value: 89.6
       objectReference: {fileID: 0}
     - target: {fileID: 224628454462412742, guid: 9c35afe52f825fe4d9508bb9ded25bc9,
         type: 2}
