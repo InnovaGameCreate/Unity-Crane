@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scene/Start.unity
     guid: 139d8627741192946aec05167b01794c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/unity-stage(forest).unity
     guid: 7687371512d931d4c9e0be18aa4ae4cb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scene/stage2.unity
     guid: e021c189359c9cf4dbc735d970d8d294
   - enabled: 0

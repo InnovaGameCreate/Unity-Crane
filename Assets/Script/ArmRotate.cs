@@ -159,7 +159,7 @@ public class ArmRotate : MonoBehaviour
 
 
         // print(relClawRot);
-        if (/*Input.GetKeyDown(KeyCode.X) &&*/ collider.CompareTag("MovableObj")//一定の角度でのみcatching判定に
+        if (/*Input.GetKeyDown(KeyCode.X) &&*/!catching&& collider.CompareTag("MovableObj")//一定の角度でのみcatching判定に
             && relClawRot > 120
             && relClawRot < 150
             // && anim.GetCurrentAnimatorStateInfo(0).IsTag("CLOSE")
