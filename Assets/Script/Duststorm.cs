@@ -31,12 +31,12 @@ public class Duststorm : MonoBehaviour {
         //enabled = !enabled;
         if(time >= 5.0 && time < 10.0)
         {
-            sound1.PlayOneShot(sound1.clip);
+            sound1.Play();
         }
         else if (time >= 10.0 && time < 20.0)
         {
             storm.Play();
-            sound2.PlayOneShot(sound2.clip);
+            sound2.Play();
         }
         else if (time >= 20.0)
         {

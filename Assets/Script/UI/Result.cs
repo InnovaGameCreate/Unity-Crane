@@ -10,7 +10,7 @@ public class Result : MonoBehaviour
     private Text total;
     private GameObject[] rank = new GameObject[4];
     private int rank_for_save;
-
+    private AudioSource se;
     //ランク決定基準
     public int rankS_border;
 
@@ -31,7 +31,7 @@ public class Result : MonoBehaviour
         rank[1] = GameObject.Find("StartCanvas/rankA");
         rank[2] = GameObject.Find("StartCanvas/rankB");
         rank[3] = GameObject.Find("StartCanvas/rankC");
-
+        se = GetComponent<AudioSource>();
         for (int i = 0; i < 4; i++)
             rank[i].SetActive(false);
 
@@ -70,14 +70,14 @@ public class Result : MonoBehaviour
     //スタート画面に移行登録
     public void ToStartScene()
     {
-        GetComponent<AudioSource>().Play();
+        se.Play();
         scenechange = true;
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if (scenechange && !GetComponent<AudioSource>().isPlaying)
+        if (scenechange && !se.isPlaying)
         {
             PlayerPrefs.SetInt("" + StartSceneManeger.selected_stage, rank_for_save);//ランクをセーブ
             SceneManager.LoadScene("Start");//スタート画面に移行

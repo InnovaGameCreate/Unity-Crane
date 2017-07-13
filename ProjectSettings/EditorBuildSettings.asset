@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scene/StageTown.unity
     guid: a066798ba9012dc4b99692e6b020c42b
   - enabled: 0
@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scene/unity-stage(forest).unity
     guid: 7687371512d931d4c9e0be18aa4ae4cb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/stage2.unity
     guid: e021c189359c9cf4dbc735d970d8d294
   - enabled: 0
